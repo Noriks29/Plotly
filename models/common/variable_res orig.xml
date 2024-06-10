@@ -1,0 +1,727 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dynamicmodel>
+  <name>variable_res.xml</name>
+  <duration>100</duration>
+  <cluster>
+    <id>1</id>
+    <name>Кластер</name>
+    <resource>
+      <id>RS_1</id>
+      <template_id>3b87011e-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Киберфизическая система</name>
+      <capacity>1</capacity>
+      <power>1.0</power>
+      <price>30.0</price>
+    </resource>
+    <resource>
+      <id>RS_2</id>
+      <template_id>3b8707e0-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Облачная система</name>
+      <capacity>1</capacity>
+      <power>4.0</power>
+      <price>10.0</price>
+    </resource>
+    <resource>
+      <id>RS_3</id>
+      <template_id>3b870d58-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Граничная система</name>
+      <capacity>1</capacity>
+      <power>2.0</power>
+      <price>10.0</price>
+    </resource>
+  </cluster>
+  <coefficients>
+    <integrity>0</integrity>
+    <uniform>0</uniform>
+    <fine>0</fine>
+    <cost>1</cost>
+    <flow>0</flow>
+    <interrupt>0</interrupt>
+    <time>0</time>
+  </coefficients>
+  <process>
+    <id>1</id>
+    <operation>
+      <id>_3</id>
+      <template_id>3b872388-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Сбор данных (cps)</name>
+      <volume>100</volume>
+      <stream>5</stream>
+      <x>125.02941176470586</x>
+      <y>810.0882352941176</y>
+    </operation>
+    <operation>
+      <id>_7</id>
+      <template_id>3b873864-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Передача данных (cps-cloud)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>495.16666666666663</x>
+      <y>660.3333333333334</y>
+    </operation>
+    <operation>
+      <id>_8</id>
+      <template_id>3b874c1e-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Обработка данных (cps)</name>
+      <volume>100</volume>
+      <stream>6</stream>
+      <x>725.5</x>
+      <y>880.0</y>
+    </operation>
+    <operation>
+      <id>_9</id>
+      <template_id>3b875fb0-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Передача данных (cps-edge)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>485.49999999999994</x>
+      <y>1469.6666666666667</y>
+    </operation>
+    <operation>
+      <id>_13</id>
+      <template_id>3b8775a4-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Обработка данных (edge)</name>
+      <volume>100</volume>
+      <stream>6</stream>
+      <x>755.1666666666666</x>
+      <y>1370.3333333333335</y>
+    </operation>
+    <operation>
+      <id>_17</id>
+      <template_id>3b878986-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Передача данных (cloud-edge)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>634.8333333333333</x>
+      <y>1040.3333333333335</y>
+    </operation>
+    <operation>
+      <id>_24</id>
+      <template_id>3b879d0e-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Обработка данных (cloud)</name>
+      <volume>100</volume>
+      <stream>6</stream>
+      <x>635.5</x>
+      <y>290.33333333333337</y>
+    </operation>
+    <operation>
+      <id>_28</id>
+      <template_id>3b87b0a0-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Передача обработанных данных (edge-cloud)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>1445.0</x>
+      <y>1020.0</y>
+    </operation>
+    <operation>
+      <id>_32</id>
+      <template_id>3b87c608-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Классификация ситуации (cloud)</name>
+      <volume>100</volume>
+      <stream>10</stream>
+      <x>1555.0</x>
+      <y>590.0</y>
+    </operation>
+    <operation>
+      <id>_39</id>
+      <template_id>3b87dbe8-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Передача обработанных данных (cloud-edge)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>985.0</x>
+      <y>1120.0</y>
+    </operation>
+    <operation>
+      <id>_41</id>
+      <template_id>3b88082a-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Классификация ситуации (edge)</name>
+      <volume>100</volume>
+      <stream>10</stream>
+      <x>1675.0</x>
+      <y>1450.0</y>
+    </operation>
+    <operation>
+      <id>_48</id>
+      <template_id>3b881fc2-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Передача обработанных данных (cps-cloud)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>795.0</x>
+      <y>480.0</y>
+    </operation>
+    <operation>
+      <id>_52</id>
+      <template_id>3b8835a2-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Классификация ситуации (cps)</name>
+      <volume>100</volume>
+      <stream>10</stream>
+      <x>1675.0</x>
+      <y>810.0</y>
+    </operation>
+    <operation>
+      <id>_55</id>
+      <template_id>3b8848bc-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Передача обработанных данных (cps-edge)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>865.0</x>
+      <y>960.0</y>
+    </operation>
+    <operation>
+      <id>_59</id>
+      <template_id>3b885ba4-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Передача обработанных данных (cloud-cps)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>975.0</x>
+      <y>710.0</y>
+    </operation>
+    <operation>
+      <id>_62</id>
+      <template_id>3b886e78-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Передача обработанных данных (edge-cps)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>1265.0</x>
+      <y>890.0</y>
+    </operation>
+    <operation>
+      <id>_66</id>
+      <template_id>3b888160-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Сохранение решения (cps)</name>
+      <volume>100</volume>
+      <stream>5</stream>
+      <x>3050.259842519685</x>
+      <y>809.732283464567</y>
+    </operation>
+    <operation>
+      <id>_71</id>
+      <template_id>3b88942a-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Принятие решения (cloud)</name>
+      <volume>100</volume>
+      <stream>10</stream>
+      <x>2195.2677165354335</x>
+      <y>230.4435695538058</y>
+    </operation>
+    <operation>
+      <id>_77</id>
+      <template_id>3b88a708-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Передача информации (edge-cloud)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>1814.5013123359581</x>
+      <y>149.69553805774285</y>
+    </operation>
+    <operation>
+      <id>_82</id>
+      <template_id>3b88c080-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Передача информации (cps-cloud)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>2104.992125984252</x>
+      <y>740.1784776902888</y>
+    </operation>
+    <operation>
+      <id>_85</id>
+      <template_id>3b88d692-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Передача информации (cloud-edge)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>1905.02624671916</x>
+      <y>690.1548556430447</y>
+    </operation>
+    <operation>
+      <id>_87</id>
+      <template_id>3b88ead8-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Принятие решения (edge)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>2084.719160104987</x>
+      <y>1140.3202099737534</y>
+    </operation>
+    <operation>
+      <id>_93</id>
+      <template_id>3b890356-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Передача информации (cps-edge)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>2105.2887139107615</x>
+      <y>940.1443569553807</y>
+    </operation>
+    <operation>
+      <id>_14</id>
+      <template_id>3b89174c-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Передача информации (cloud-cps)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>2634.8447839104783</x>
+      <y>559.5055242996893</y>
+    </operation>
+    <operation>
+      <id>_56</id>
+      <template_id>3b892a48-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Передача управления (edge-cps)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>2924.8435129106156</x>
+      <y>950.0530913965522</y>
+    </operation>
+    <operation>
+      <id>_99</id>
+      <template_id>3b893ce0-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Передача управления (cloud-cps)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>2775.1389533575652</x>
+      <y>400.2478082835226</y>
+    </operation>
+    <operation>
+      <id>_105</id>
+      <template_id>3b894fdc-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Передача управления (edge-cloud)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>2375.337353110995</x>
+      <y>510.3442134771109</y>
+    </operation>
+    <operation>
+      <id>_108</id>
+      <template_id>3b8962d8-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Передача управления (cloud-edge)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>2534.875647975145</x>
+      <y>639.7446958504303</y>
+    </operation>
+    <operation>
+      <id>_111</id>
+      <template_id>3b8975c0-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Реализация управления (cps)</name>
+      <volume>100</volume>
+      <stream>5</stream>
+      <x>3235.0</x>
+      <y>1040.0</y>
+    </operation>
+    <operation>
+      <id>_97</id>
+      <template_id>3b898948-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Сохранение обработанных данных (cloud)</name>
+      <volume>100</volume>
+      <stream>5</stream>
+      <x>1435.0</x>
+      <y>360.0</y>
+    </operation>
+    <operation>
+      <id>_121</id>
+      <template_id>3b899c58-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Сохранение информации (cloud)</name>
+      <volume>100</volume>
+      <stream>5</stream>
+      <x>1905.0</x>
+      <y>460.0</y>
+    </operation>
+    <operation>
+      <id>_124</id>
+      <template_id>3b89af68-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Сохранение решения (cloud)</name>
+      <volume>100</volume>
+      <stream>5</stream>
+      <x>2375.0</x>
+      <y>330.0</y>
+    </operation>
+    <operation>
+      <id>_127</id>
+      <template_id>3b89c214-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Сохранение решения (edge)</name>
+      <volume>100</volume>
+      <stream>5</stream>
+      <x>2385.0</x>
+      <y>1090.0</y>
+    </operation>
+    <operation>
+      <id>_133</id>
+      <template_id>3b89d4e8-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Передача информации (edge-cps)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>1955.0</x>
+      <y>1370.0</y>
+    </operation>
+    <operation>
+      <id>_136</id>
+      <template_id>3b89e7a8-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Сохранение обработанных данных (edge)</name>
+      <volume>100</volume>
+      <stream>5</stream>
+      <x>1445.0</x>
+      <y>1540.0</y>
+    </operation>
+    <operation>
+      <id>_130</id>
+      <template_id>3b89fa40-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Сохранение информации (edge)</name>
+      <volume>100</volume>
+      <stream>5</stream>
+      <x>1955.0</x>
+      <y>1230.0</y>
+    </operation>
+    <operation>
+      <id>_34</id>
+      <template_id>3b8a0cc4-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Сохранение данных (cps)</name>
+      <volume>100</volume>
+      <stream>5</stream>
+      <x>975.0</x>
+      <y>810.0</y>
+    </operation>
+    <operation>
+      <id>_54</id>
+      <template_id>3b8a1f66-16a3-11ea-9a91-8c8590eef8e2</template_id>
+      <name>Принятие решения (cps)</name>
+      <volume>100</volume>
+      <stream>8</stream>
+      <x>2375.0</x>
+      <y>810.0</y>
+    </operation>
+    <graph>
+      <edge from="_3" to="_7">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_3" to="_8">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_3" to="_9">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_7" to="_17">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_7" to="_24">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_8" to="_48">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_8" to="_55">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_8" to="_34">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_9" to="_13">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_13" to="_28">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_13" to="_62">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_13" to="_136">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_17" to="_13">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_24" to="_39">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_24" to="_59">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_24" to="_97">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_28" to="_32">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_32" to="_85">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_32" to="_14">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_32" to="_121">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_39" to="_41">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_41" to="_77">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_41" to="_133">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_41" to="_130">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_48" to="_32">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_52" to="_93">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_52" to="_82">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_52" to="_54">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_55" to="_41">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_59" to="_52">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_62" to="_52">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_66" to="_111">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_71" to="_108">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_71" to="_124">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_77" to="_71">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_82" to="_71">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_85" to="_87">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_87" to="_105">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_87" to="_127">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_93" to="_87">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_14" to="_66">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_56" to="_111">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_99" to="_111">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_105" to="_99">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_108" to="_56">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_97" to="_32">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_121" to="_71">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_124" to="_99">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_127" to="_56">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_133" to="_66">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_136" to="_41">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_130" to="_87">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_34" to="_52">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_54" to="_66">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+    </graph>
+  </process>
+  <productivity>
+    <resource ID="RS_1">
+      <job ID="_3">
+        <value>100</value>
+      </job>
+      <job ID="_7">
+        <value>100</value>
+      </job>
+      <job ID="_8">
+        <value>100</value>
+      </job>
+      <job ID="_9">
+        <value>100</value>
+      </job>
+      <job ID="_48">
+        <value>100</value>
+      </job>
+      <job ID="_52">
+        <value>100</value>
+      </job>
+      <job ID="_55">
+        <value>100</value>
+      </job>
+      <job ID="_66">
+        <value>100</value>
+      </job>
+      <job ID="_82">
+        <value>100</value>
+      </job>
+      <job ID="_93">
+        <value>100</value>
+      </job>
+      <job ID="_111">
+        <value>100</value>
+      </job>
+      <job ID="_34">
+        <value>100</value>
+      </job>
+      <job ID="_54">
+        <value>100</value>
+      </job>
+    </resource>
+    <resource ID="RS_2">
+      <job ID="_17">
+        <value>100</value>
+      </job>
+      <job ID="_24">
+        <value>100</value>
+      </job>
+      <job ID="_32">
+        <value>100</value>
+      </job>
+      <job ID="_59">
+        <value>100</value>
+      </job>
+      <job ID="_71">
+        <value>100</value>
+      </job>
+      <job ID="_85">
+        <value>100</value>
+      </job>
+      <job ID="_14">
+        <value>100</value>
+      </job>
+      <job ID="_99">
+        <value>100</value>
+      </job>
+      <job ID="_108">
+        <value>100</value>
+      </job>
+      <job ID="_97">
+        <value>100</value>
+      </job>
+      <job ID="_121">
+        <value>100</value>
+      </job>
+      <job ID="_124">
+        <value>100</value>
+      </job>
+    </resource>
+    <resource ID="RS_3">
+      <job ID="_13">
+        <value>100</value>
+      </job>
+      <job ID="_28">
+        <value>100</value>
+      </job>
+      <job ID="_39">
+        <value>100</value>
+      </job>
+      <job ID="_41">
+        <value>100</value>
+      </job>
+      <job ID="_62">
+        <value>100</value>
+      </job>
+      <job ID="_77">
+        <value>100</value>
+      </job>
+      <job ID="_87">
+        <value>100</value>
+      </job>
+      <job ID="_56">
+        <value>100</value>
+      </job>
+      <job ID="_105">
+        <value>100</value>
+      </job>
+      <job ID="_127">
+        <value>100</value>
+      </job>
+      <job ID="_133">
+        <value>100</value>
+      </job>
+      <job ID="_136">
+        <value>100</value>
+      </job>
+      <job ID="_130">
+        <value>100</value>
+      </job>
+    </resource>
+  </productivity>
+</dynamicmodel>

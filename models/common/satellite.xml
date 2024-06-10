@@ -1,0 +1,432 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dynamicmodel>
+  <name>satellite.xml</name>
+  <duration>100</duration>
+  <cluster>
+    <id>1</id>
+    <name>Кластер</name>
+    <resource>
+      <id>RS_1</id>
+      <template_id>46cb3770-9101-11e9-b24b-0242ac110002</template_id>
+      <name>УДМ</name>
+      <capacity>1</capacity>
+      <power>1.0</power>
+      <price>6.0</price>
+    </resource>
+    <resource>
+      <id>RS_2</id>
+      <template_id>46cb5282-9101-11e9-b24b-0242ac110002</template_id>
+      <name>ДУОС</name>
+      <capacity>1</capacity>
+      <power>1.0</power>
+      <price>16</price>
+    </resource>
+    <resource>
+      <id>RS_3</id>
+      <template_id>46cb5d7c-9101-11e9-b24b-0242ac110002</template_id>
+      <name>УДМ и ПОЗ</name>
+      <capacity>1</capacity>
+      <power>1.0</power>
+      <price>6.0</price>
+    </resource>
+    <resource>
+      <id>RS_4</id>
+      <template_id>46cb65d8-9101-11e9-b24b-0242ac110002</template_id>
+      <name>ДУОС и ПОЗ</name>
+      <capacity>1</capacity>
+      <power>1.0</power>
+      <price>16</price>
+    </resource>
+    <resource>
+      <id>RS_5</id>
+      <template_id>46cbd702-9101-11e9-b24b-0242ac110002</template_id>
+      <name>УДМ и ОЗД</name>
+      <capacity>1</capacity>
+      <power>1.0</power>
+      <price>6.0</price>
+    </resource>
+    <resource>
+      <id>RS_6</id>
+      <template_id>46cbe800-9101-11e9-b24b-0242ac110002</template_id>
+      <name>ДУОС и ОЗД</name>
+      <capacity>1</capacity>
+      <power>1.0</power>
+      <price>16</price>
+    </resource>
+    <resource>
+      <id>RS_7</id>
+      <template_id>46cc5560-9101-11e9-b24b-0242ac110002</template_id>
+      <name>УДМ и ОЗД</name>
+      <capacity>1</capacity>
+      <power>1.0</power>
+      <price>8.0</price>
+    </resource>
+    <resource>
+      <id>RS_8</id>
+      <template_id>46cc6ae6-9101-11e9-b24b-0242ac110002</template_id>
+      <name>КА</name>
+      <capacity>1</capacity>
+      <power>1.0</power>
+      <price>8.0</price>
+    </resource>
+  </cluster>
+  <coefficients>
+    <integrity>0</integrity>
+    <uniform>0</uniform>
+    <fine>0</fine>
+    <cost>1</cost>
+    <flow>0</flow>
+    <interrupt>0</interrupt>
+    <time>0</time>
+  </coefficients>
+  <process>
+    <id>1</id>
+    <operation>
+      <id>_3</id>
+      <template_id>46cd594c-9101-11e9-b24b-0242ac110002</template_id>
+      <name>S1</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>120.0</x>
+      <y>270.0</y>
+    </operation>
+    <operation>
+      <id>_4</id>
+      <template_id>46cdc1de-9101-11e9-b24b-0242ac110002</template_id>
+      <name>S2</name>
+      <volume>100</volume>
+      <stream>10</stream>
+      <x>120.0</x>
+      <y>490.0</y>
+    </operation>
+    <operation>
+      <id>_5</id>
+      <template_id>46cded3a-9101-11e9-b24b-0242ac110002</template_id>
+      <name>S3</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>490.0</x>
+      <y>310.0</y>
+    </operation>
+    <operation>
+      <id>_6</id>
+      <template_id>46ce1c10-9101-11e9-b24b-0242ac110002</template_id>
+      <name>S4</name>
+      <volume>100</volume>
+      <stream>10</stream>
+      <x>490.0</x>
+      <y>410.0</y>
+    </operation>
+    <operation>
+      <id>_7</id>
+      <template_id>46ce3e20-9101-11e9-b24b-0242ac110002</template_id>
+      <name>S5</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>280.0</x>
+      <y>160.0</y>
+    </operation>
+    <operation>
+      <id>_8</id>
+      <template_id>46ce5d92-9101-11e9-b24b-0242ac110002</template_id>
+      <name>S6</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>280.0</x>
+      <y>600.0</y>
+    </operation>
+    <operation>
+      <id>_9</id>
+      <template_id>46ce86f0-9101-11e9-b24b-0242ac110002</template_id>
+      <name>S7</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>890.0</x>
+      <y>310.0</y>
+    </operation>
+    <operation>
+      <id>_10</id>
+      <template_id>46cea360-9101-11e9-b24b-0242ac110002</template_id>
+      <name>S8</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>490.0</x>
+      <y>490.0</y>
+    </operation>
+    <operation>
+      <id>_11</id>
+      <template_id>46ced394-9101-11e9-b24b-0242ac110002</template_id>
+      <name>S9</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>730.0</x>
+      <y>590.0</y>
+    </operation>
+    <operation>
+      <id>_12</id>
+      <template_id>46cf07d8-9101-11e9-b24b-0242ac110002</template_id>
+      <name>S10</name>
+      <volume>100</volume>
+      <stream>10</stream>
+      <x>890.0</x>
+      <y>240.0</y>
+    </operation>
+    <operation>
+      <id>_13</id>
+      <template_id>46d12cca-9101-11e9-b24b-0242ac110002</template_id>
+      <name>S11</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>890.0</x>
+      <y>380.0</y>
+    </operation>
+    <operation>
+      <id>_14</id>
+      <template_id>46d4fa1c-9101-11e9-b24b-0242ac110002</template_id>
+      <name>S12</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>1060.0</x>
+      <y>310.0</y>
+    </operation>
+    <operation>
+      <id>_15</id>
+      <template_id>46d6c478-9101-11e9-b24b-0242ac110002</template_id>
+      <name>S13</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>20.0</x>
+      <y>380.0</y>
+    </operation>
+    <operation>
+      <id>_40</id>
+      <template_id>46d6fc68-9101-11e9-b24b-0242ac110002</template_id>
+      <name>S13-S9</name>
+      <volume>1</volume>
+      <stream>1</stream>
+      <x>310.0</x>
+      <y>490.0</y>
+    </operation>
+    <operation>
+      <id>_63</id>
+      <template_id>46d7df2a-9101-11e9-b24b-0242ac110002</template_id>
+      <name>S13-S10</name>
+      <volume>1</volume>
+      <stream>1</stream>
+      <x>310.0</x>
+      <y>270.0</y>
+    </operation>
+    <operation>
+      <id>_67</id>
+      <template_id>46d8f888-9101-11e9-b24b-0242ac110002</template_id>
+      <name>S8-S10</name>
+      <volume>1</volume>
+      <stream>1</stream>
+      <x>730.0</x>
+      <y>390.0</y>
+    </operation>
+    <operation>
+      <id>_74</id>
+      <template_id>46d9b26e-9101-11e9-b24b-0242ac110002</template_id>
+      <name>S5-S10</name>
+      <volume>1</volume>
+      <stream>1</stream>
+      <x>600.0</x>
+      <y>160.0</y>
+    </operation>
+    <operation>
+      <id>_76</id>
+      <template_id>46da41c0-9101-11e9-b24b-0242ac110002</template_id>
+      <name>S8-S11</name>
+      <volume>1</volume>
+      <stream>1</stream>
+      <x>730.0</x>
+      <y>490.0</y>
+    </operation>
+    <operation>
+      <id>_46</id>
+      <template_id>46dac140-9101-11e9-b24b-0242ac110002</template_id>
+      <name>S13-S3-S4</name>
+      <volume>1</volume>
+      <stream>1</stream>
+      <x>210.0</x>
+      <y>380.0</y>
+    </operation>
+    <graph>
+      <edge from="_3" to="_7">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_4" to="_8">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_5" to="_9">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_6" to="_10">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_7" to="_74">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_8" to="_11">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_9" to="_14">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_10" to="_67">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_10" to="_76">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_11" to="_13">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_12" to="_14">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_13" to="_14">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_15" to="_46">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_15" to="_4">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_15" to="_3">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_40" to="_11">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_63" to="_74">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_67" to="_12">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_74" to="_12">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_76" to="_13">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_46" to="_6">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_46" to="_5">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_46" to="_40">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_46" to="_63">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+    </graph>
+  </process>
+  <productivity>
+    <resource ID="RS_1">
+      <job ID="_3">
+        <value>1</value>
+      </job>
+      <job ID="_7">
+        <value>1</value>
+      </job>
+    </resource>
+    <resource ID="RS_2">
+      <job ID="_4">
+        <value>1</value>
+      </job>
+      <job ID="_8">
+        <value>1</value>
+      </job>
+    </resource>
+    <resource ID="RS_3">
+      <job ID="_5">
+        <value>1</value>
+      </job>
+      <job ID="_6">
+        <value>1</value>
+      </job>
+      <job ID="_9">
+        <value>1</value>
+      </job>
+    </resource>
+    <resource ID="RS_4">
+      <job ID="_6">
+        <value>1</value>
+      </job>
+      <job ID="_10">
+        <value>1</value>
+      </job>
+    </resource>
+    <resource ID="RS_5">
+      <job ID="_11">
+        <value>1</value>
+      </job>
+    </resource>
+    <resource ID="RS_6">
+      <job ID="_12">
+        <value>1</value>
+      </job>
+      <job ID="_13">
+        <value>1</value>
+      </job>
+    </resource>
+    <resource ID="RS_7">
+      <job ID="_14">
+        <value>1</value>
+      </job>
+    </resource>
+    <resource ID="RS_8">
+      <job ID="_15">
+        <value>1</value>
+      </job>
+      <job ID="_40">
+        <value>1</value>
+      </job>
+      <job ID="_63">
+        <value>1</value>
+      </job>
+      <job ID="_67">
+        <value>1</value>
+      </job>
+      <job ID="_74">
+        <value>1</value>
+      </job>
+      <job ID="_76">
+        <value>1</value>
+      </job>
+      <job ID="_46">
+        <value>1</value>
+      </job>
+    </resource>
+  </productivity>
+</dynamicmodel>

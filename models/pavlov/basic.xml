@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dynamicmodel>
+  <name>basic.bpmn</name>
+  <duration>100</duration>
+  <cluster>
+    <id>1</id>
+    <name>Кластер</name>
+    <resource>
+      <id>RS_1</id>
+      <template_id>4f2bb730-43d9-11ed-be40-acde48001122</template_id>
+      <name>Resource1</name>
+      <capacity>1</capacity>
+      <power>5</power>
+      <price>5</price>
+    </resource>
+    <resource>
+      <id>RS_2</id>
+      <template_id>4f2bbd2a-43d9-11ed-be40-acde48001122</template_id>
+      <name>Resource2</name>
+      <capacity>1</capacity>
+      <power>5</power>
+      <price>5</price>
+    </resource>
+    <resource>
+      <id>RS_3</id>
+      <template_id>4f2bc108-43d9-11ed-be40-acde48001122</template_id>
+      <name>Resource3</name>
+      <capacity>1</capacity>
+      <power>5</power>
+      <price>5</price>
+    </resource>
+  </cluster>
+  <coefficients>
+    <integrity>0</integrity>
+    <uniform>0</uniform>
+    <fine>0</fine>
+    <cost>1</cost>
+    <flow>0</flow>
+    <interrupt>0</interrupt>
+    <time>0</time>
+  </coefficients>
+  <process>
+    <id>1</id>
+    <operation>
+      <id>_3</id>
+      <template_id>4f2bd08a-43d9-11ed-be40-acde48001122</template_id>
+      <name>Task001</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>200.07692307692307</x>
+      <y>292.0</y>
+    </operation>
+    <operation>
+      <id>_4</id>
+      <template_id>4f2bdf26-43d9-11ed-be40-acde48001122</template_id>
+      <name>Task002</name>
+      <volume>100</volume>
+      <stream>50</stream>
+      <x>342.0769230769231</x>
+      <y>292.0</y>
+    </operation>
+    <operation>
+      <id>_5</id>
+      <template_id>4f2beaca-43d9-11ed-be40-acde48001122</template_id>
+      <name>Task003</name>
+      <volume>100</volume>
+      <stream>40</stream>
+      <x>468.0769230769231</x>
+      <y>292.0</y>
+    </operation>
+    <operation>
+      <id>_6</id>
+      <template_id>4f2bfcf4-43d9-11ed-be40-acde48001122</template_id>
+      <name>Task004</name>
+      <volume>100</volume>
+      <stream>70</stream>
+      <x>607.0769230769231</x>
+      <y>292.0</y>
+    </operation>
+    <graph>
+      <edge from="_3" to="_4">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_4" to="_5">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_5" to="_6">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+    </graph>
+  </process>
+  <productivity>
+    <resource ID="RS_1">
+      <job ID="_3">
+        <value>100</value>
+      </job>
+      <job ID="_4">
+        <value>100</value>
+      </job>
+      <job ID="_5">
+        <value>100</value>
+      </job>
+      <job ID="_6">
+        <value>100</value>
+      </job>
+    </resource>
+    <resource ID="RS_2">
+      <job ID="_3">
+        <value>100</value>
+      </job>
+      <job ID="_4">
+        <value>100</value>
+      </job>
+      <job ID="_5">
+        <value>100</value>
+      </job>
+      <job ID="_6">
+        <value>100</value>
+      </job>
+    </resource>
+    <resource ID="RS_3">
+      <job ID="_3">
+        <value>100</value>
+      </job>
+      <job ID="_4">
+        <value>100</value>
+      </job>
+      <job ID="_5">
+        <value>100</value>
+      </job>
+      <job ID="_6">
+        <value>100</value>
+      </job>
+    </resource>
+  </productivity>
+</dynamicmodel>

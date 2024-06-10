@@ -1,0 +1,17 @@
+time;Job;Res;C;solution
+0;ÈÇÄ_0_0 Start model(4836b6e4-271b-11ef-831a-30f6ef8c05a5);Group(RS_3);0;1
+1;ÈÇÄ_0_[8] 0 Start Way 13 (21)(4836ddf8-271b-11ef-991d-30f6ef8c05a5);Group(RS_3);0;1
+2;ÈÇÄ_0_[8] W1 Loading(4836ddf9-271b-11ef-b362-30f6ef8c05a5);CAR_2(RS_2);6217,083318789131;1
+2;ÈÇÄ_0_[8] W3 Loading(4836de01-271b-11ef-a19c-30f6ef8c05a5);CAR_1(RS_1);6217,083318789131;1
+3;ÈÇÄ_0_[8] W1 Move to parking 1(4836ddfa-271b-11ef-9e04-30f6ef8c05a5);CAR_2(RS_2);6217,085494781768;1
+3;ÈÇÄ_0_[8] W3 Move to parking 3(4836de02-271b-11ef-bf4f-30f6ef8c05a5);CAR_1(RS_1);6217,085494781768;1
+4;ÈÇÄ_0_[8] W1 Unloading (1)(4836ddfb-271b-11ef-a180-30f6ef8c05a5);CAR_2(RS_2);6217,08549555792;1
+4;ÈÇÄ_0_[8] W3 Unloading (1)(4836de03-271b-11ef-a084-30f6ef8c05a5);CAR_1(RS_1);6217,08549555792;1
+5;ÈÇÄ_0_[8] W3 Move to parking 4(4836ddf6-271b-11ef-a809-30f6ef8c05a5);CAR_1(RS_1);6217,085495558196;1
+5;ÈÇÄ_0_[8] W1 Move to home (2.1)(4836ddfc-271b-11ef-a8da-30f6ef8c05a5);CAR_2(RS_2);0;1
+6;ÈÇÄ_0_[8] W3 Unloading (2)(4836ddf5-271b-11ef-936a-30f6ef8c05a5);CAR_1(RS_1);6217,085495558196;1
+6;ÈÇÄ_0_[8] 0 End W1(4836de00-271b-11ef-99e3-30f6ef8c05a5);CAR_2(RS_2);0;1
+7;ÈÇÄ_0_[8] W3 Move to home (2.2)(4836ddf4-271b-11ef-96da-30f6ef8c05a5);CAR_1(RS_1);6217,085495558196;1
+8;ÈÇÄ_0_[8] 0 End W3(4836de04-271b-11ef-bee6-30f6ef8c05a5);CAR_1(RS_1);6217,085495558196;1
+9;ÈÇÄ_0_[8] 0 End Way 13 (21)(4836de05-271b-11ef-a68b-30f6ef8c05a5);Group(RS_3);0;1
+10;ÈÇÄ_0_0 End model(4836b6f3-271b-11ef-bfc1-30f6ef8c05a5);Group(RS_3);0;1

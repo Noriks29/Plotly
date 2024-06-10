@@ -1,0 +1,373 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dynamicmodel>
+  <name>robo.xml</name>
+  <duration>49</duration>
+  <cluster>
+    <id>1</id>
+    <name>Кластер</name>
+    <resource>
+      <id>RS_1</id>
+      <template_id>e95aed06-6060-11e9-8491-8c8590eef8e2</template_id>
+      <name>Манипулятор</name>
+      <capacity>1</capacity>
+      <power>5.0</power>
+      <price>30.0</price>
+    </resource>
+    <resource>
+      <id>RS_2</id>
+      <template_id>e95afb78-6060-11e9-a2cf-8c8590eef8e2</template_id>
+      <name>Тележка</name>
+      <capacity>1</capacity>
+      <power>5.0</power>
+      <price>5.0</price>
+    </resource>
+  </cluster>
+  <coefficients>
+    <integrity>0</integrity>
+    <uniform>0</uniform>
+    <fine>0</fine>
+    <cost>0.485</cost>
+    <flow>0</flow>
+    <interrupt>0</interrupt>
+    <time>0.515</time>
+  </coefficients>
+  <process>
+    <id>1</id>
+    <operation>
+      <id>op_1</id>
+      <template_id>e95b195a-6060-11e9-943b-8c8590eef8e2</template_id>
+      <name>склад - М - короб</name>
+      <volume>20</volume>
+      <stream>5</stream>
+      <x>120.0</x>
+      <y>250.0</y>
+    </operation>
+    <operation>
+      <id>op_2</id>
+      <template_id>e95b3df4-6060-11e9-9589-8c8590eef8e2</template_id>
+      <name>склад - М - короб</name>
+      <volume>20</volume>
+      <stream>5</stream>
+      <x>120.0</x>
+      <y>170.0</y>
+    </operation>
+    <operation>
+      <id>op_3</id>
+      <template_id>e95b6ac2-6060-11e9-96a1-8c8590eef8e2</template_id>
+      <name>склад - М - короб</name>
+      <volume>20</volume>
+      <stream>5</stream>
+      <x>120.0</x>
+      <y>90.0</y>
+    </operation>
+    <operation>
+      <id>op_10</id>
+      <template_id>e95b8a66-6060-11e9-9b4b-8c8590eef8e2</template_id>
+      <name>склад - М+К - стол</name>
+      <volume>20</volume>
+      <stream>5</stream>
+      <x>540.0</x>
+      <y>90.0</y>
+    </operation>
+    <operation>
+      <id>op_11</id>
+      <template_id>e95bb68a-6060-11e9-8d89-8c8590eef8e2</template_id>
+      <name>склад - М+К - телега</name>
+      <volume>20</volume>
+      <stream>5</stream>
+      <x>540.0</x>
+      <y>160.0</y>
+    </operation>
+    <operation>
+      <id>op_16</id>
+      <template_id>e95bd5b6-6060-11e9-8e22-8c8590eef8e2</template_id>
+      <name>стол - М - башня</name>
+      <volume>20</volume>
+      <stream>5</stream>
+      <x>1010.0</x>
+      <y>90.0</y>
+    </operation>
+    <operation>
+      <id>op_17</id>
+      <template_id>e95bf8c0-6060-11e9-89b3-8c8590eef8e2</template_id>
+      <name>стол - М - башня</name>
+      <volume>20</volume>
+      <stream>5</stream>
+      <x>1010.0</x>
+      <y>160.0</y>
+    </operation>
+    <operation>
+      <id>op_18</id>
+      <template_id>e95c1710-6060-11e9-acd6-8c8590eef8e2</template_id>
+      <name>стол - М - башня</name>
+      <volume>20</volume>
+      <stream>5</stream>
+      <x>1010.0</x>
+      <y>230.0</y>
+    </operation>
+    <operation>
+      <id>op_12</id>
+      <template_id>e95c3452-6060-11e9-ada2-8c8590eef8e2</template_id>
+      <name>склад - Т - парковка</name>
+      <volume>20</volume>
+      <stream>5</stream>
+      <x>700.5</x>
+      <y>450.0</y>
+    </operation>
+    <operation>
+      <id>op_4</id>
+      <template_id>e95c511c-6060-11e9-b52d-8c8590eef8e2</template_id>
+      <name>склад - М - телелга</name>
+      <volume>20</volume>
+      <stream>5</stream>
+      <x>340.0</x>
+      <y>260.0</y>
+    </operation>
+    <operation>
+      <id>op_5</id>
+      <template_id>e95c8f06-6060-11e9-a688-8c8590eef8e2</template_id>
+      <name>склад - М - телелга</name>
+      <volume>20</volume>
+      <stream>5</stream>
+      <x>340.0</x>
+      <y>340.0</y>
+    </operation>
+    <operation>
+      <id>op_6</id>
+      <template_id>e95caf7a-6060-11e9-a007-8c8590eef8e2</template_id>
+      <name>склад - М - телелга</name>
+      <volume>20</volume>
+      <stream>5</stream>
+      <x>340.0</x>
+      <y>420.0</y>
+    </operation>
+    <operation>
+      <id>op_13</id>
+      <template_id>e95cceb4-6060-11e9-b6e8-8c8590eef8e2</template_id>
+      <name>парковка - М - стол</name>
+      <volume>20</volume>
+      <stream>5</stream>
+      <x>700.0</x>
+      <y>370.0</y>
+    </operation>
+    <operation>
+      <id>op_14</id>
+      <template_id>e95cec3a-6060-11e9-9282-8c8590eef8e2</template_id>
+      <name>парковка - М - стол</name>
+      <volume>20</volume>
+      <stream>5</stream>
+      <x>700.5</x>
+      <y>290.0</y>
+    </operation>
+    <operation>
+      <id>op_15</id>
+      <template_id>e95d0850-6060-11e9-bef5-8c8590eef8e2</template_id>
+      <name>парковка - М - стол</name>
+      <volume>20</volume>
+      <stream>5</stream>
+      <x>700.5</x>
+      <y>210.0</y>
+    </operation>
+    <operation>
+      <id>op_7</id>
+      <template_id>e95d233a-6060-11e9-9165-8c8590eef8e2</template_id>
+      <name>склад - М - башня</name>
+      <volume>10</volume>
+      <stream>10</stream>
+      <x>300.0</x>
+      <y>550.0</y>
+    </operation>
+    <operation>
+      <id>op_8</id>
+      <template_id>e95d3fc8-6060-11e9-947c-8c8590eef8e2</template_id>
+      <name>склад - М - башня</name>
+      <volume>20</volume>
+      <stream>10</stream>
+      <x>500.0</x>
+      <y>550.0</y>
+    </operation>
+    <operation>
+      <id>op_9</id>
+      <template_id>e95d5cd8-6060-11e9-9108-8c8590eef8e2</template_id>
+      <name>склад - М - башня</name>
+      <volume>10</volume>
+      <stream>10</stream>
+      <x>700.0</x>
+      <y>550.0</y>
+    </operation>
+    <operation>
+      <id>_5</id>
+      <template_id>e95d790c-6060-11e9-8c19-8c8590eef8e2</template_id>
+      <name>На исходную</name>
+      <volume>20</volume>
+      <stream>5</stream>
+      <x>20.0</x>
+      <y>330.0</y>
+    </operation>
+    <operation>
+      <id>_2</id>
+      <template_id>e95d95fe-6060-11e9-b549-8c8590eef8e2</template_id>
+      <name>На финишную</name>
+      <volume>20</volume>
+      <stream>5</stream>
+      <x>1010.0</x>
+      <y>420.0</y>
+    </operation>
+    <graph>
+      <edge from="op_1" to="op_2">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="op_2" to="op_3">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="op_3" to="op_10">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="op_3" to="op_11">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="op_10" to="op_16">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="op_11" to="op_12">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="op_16" to="op_17">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="op_17" to="op_18">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="op_18" to="_2">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="op_12" to="op_13">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="op_4" to="op_5">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="op_5" to="op_6">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="op_6" to="op_12">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="op_13" to="op_14">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="op_14" to="op_15">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="op_15" to="op_16">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="op_7" to="op_8">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="op_8" to="op_9">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="op_9" to="_2">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_5" to="op_1">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_5" to="op_7">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="_5" to="op_4">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+    </graph>
+  </process>
+  <productivity>
+    <resource ID="RS_1">
+      <job ID="op_1">
+        <value>1</value>
+      </job>
+      <job ID="op_2">
+        <value>1</value>
+      </job>
+      <job ID="op_3">
+        <value>1</value>
+      </job>
+      <job ID="op_10">
+        <value>1</value>
+      </job>
+      <job ID="op_11">
+        <value>1</value>
+      </job>
+      <job ID="op_16">
+        <value>1</value>
+      </job>
+      <job ID="op_17">
+        <value>1</value>
+      </job>
+      <job ID="op_18">
+        <value>1</value>
+      </job>
+      <job ID="op_4">
+        <value>1</value>
+      </job>
+      <job ID="op_5">
+        <value>1</value>
+      </job>
+      <job ID="op_6">
+        <value>1</value>
+      </job>
+      <job ID="op_13">
+        <value>1</value>
+      </job>
+      <job ID="op_14">
+        <value>1</value>
+      </job>
+      <job ID="op_15">
+        <value>1</value>
+      </job>
+      <job ID="op_7">
+        <value>1</value>
+      </job>
+      <job ID="op_8">
+        <value>1</value>
+      </job>
+      <job ID="op_9">
+        <value>1</value>
+      </job>
+      <job ID="_5">
+        <value>1</value>
+      </job>
+      <job ID="_2">
+        <value>1</value>
+      </job>
+    </resource>
+    <resource ID="RS_2">
+      <job ID="op_12">
+        <value>1</value>
+      </job>
+    </resource>
+  </productivity>
+</dynamicmodel>

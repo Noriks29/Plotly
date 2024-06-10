@@ -1,0 +1,1948 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dynamicmodel>
+  <name>ctss_sec.xml</name>
+  <duration>180</duration>
+  <cluster>
+    <id>1</id>
+    <name>Кластер</name>
+    <resource>
+      <id>1</id>
+      <template_id>None</template_id>
+      <name>Цех</name>
+      <capacity>5</capacity>
+      <power>10.0</power>
+      <price>1.0</price>
+    </resource>
+    <resource>
+      <id>2</id>
+      <template_id>None</template_id>
+      <name>Кран</name>
+      <capacity>5</capacity>
+      <power>10.0</power>
+      <price>1.0</price>
+    </resource>
+  </cluster>
+  <coefficients>
+    <integrity>0</integrity>
+    <uniform>0</uniform>
+    <fine>0</fine>
+    <cost>0</cost>
+    <flow>0</flow>
+    <interrupt>0</interrupt>
+    <time>1</time>
+  </coefficients>
+  <process>
+    <id>1</id>
+    <operation>
+      <id>2</id>
+      <template_id>None</template_id>
+      <name>Start Event</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>72</x>
+      <y>78</y>
+    </operation>
+    <operation>
+      <id>3</id>
+      <template_id>None</template_id>
+      <name>Передача листов из 1-го пролёта на УПОМ - МК</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>5</x>
+      <y>82</y>
+    </operation>
+    <operation>
+      <id>4</id>
+      <template_id>None</template_id>
+      <name>Правка листа на вальцах</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>67</x>
+      <y>52</y>
+    </operation>
+    <operation>
+      <id>5</id>
+      <template_id>None</template_id>
+      <name>Передача листа на ЛПРОЛПП</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>9</x>
+      <y>71</y>
+    </operation>
+    <operation>
+      <id>6</id>
+      <template_id>None</template_id>
+      <name>Предварительная обработка</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>57</x>
+      <y>71</y>
+    </operation>
+    <operation>
+      <id>7</id>
+      <template_id>None</template_id>
+      <name>Передача на расходный склад стали</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>97</x>
+      <y>60</y>
+    </operation>
+    <operation>
+      <id>8</id>
+      <template_id>None</template_id>
+      <name>Расходный склад стали</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>19</x>
+      <y>39</y>
+    </operation>
+    <operation>
+      <id>9</id>
+      <template_id>None</template_id>
+      <name>Передача листов из 1-го пролёта на УПОМ - ЦТ</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>88</x>
+      <y>79</y>
+    </operation>
+    <operation>
+      <id>10</id>
+      <template_id>None</template_id>
+      <name>Передача листов из 2-го пролёта на УПОМ - МК</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>76</x>
+      <y>16</y>
+    </operation>
+    <operation>
+      <id>14</id>
+      <template_id>None</template_id>
+      <name>Передача секции на очистку</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>65</x>
+      <y>47</y>
+    </operation>
+    <operation>
+      <id>17</id>
+      <template_id>None</template_id>
+      <name>Передача профиля из 1-го пролёта на УПОМ - ЦТ</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>11</x>
+      <y>88</y>
+    </operation>
+    <operation>
+      <id>18</id>
+      <template_id>None</template_id>
+      <name>Расходный склад стали</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>43</x>
+      <y>67</y>
+    </operation>
+    <operation>
+      <id>19</id>
+      <template_id>None</template_id>
+      <name>Передача профиля из 1-го пролёта на УПОМ - МК</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>93</x>
+      <y>32</y>
+    </operation>
+    <operation>
+      <id>21</id>
+      <template_id>None</template_id>
+      <name>Передача листов из 1-го пролёта на УПОМ - МК</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>4</x>
+      <y>77</y>
+    </operation>
+    <operation>
+      <id>24</id>
+      <template_id>None</template_id>
+      <name>Передача профиля из 1-го пролёта на УПОМ - МК</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>83</x>
+      <y>98</y>
+    </operation>
+    <operation>
+      <id>25</id>
+      <template_id>None</template_id>
+      <name>Расходный склад стали</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>34</x>
+      <y>24</y>
+    </operation>
+    <operation>
+      <id>28</id>
+      <template_id>None</template_id>
+      <name>Расходный склад стали</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>6</x>
+      <y>72</y>
+    </operation>
+    <operation>
+      <id>30</id>
+      <template_id>None</template_id>
+      <name>Расходный склад стали</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>90</x>
+      <y>63</y>
+    </operation>
+    <operation>
+      <id>32</id>
+      <template_id>None</template_id>
+      <name>Расходный склад стали</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>98</x>
+      <y>7</y>
+    </operation>
+    <operation>
+      <id>33</id>
+      <template_id>None</template_id>
+      <name>Передача профиля из 2-го пролёта на УПОМ - МК</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>27</x>
+      <y>23</y>
+    </operation>
+    <operation>
+      <id>34</id>
+      <template_id>None</template_id>
+      <name>Расходный склад стали</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>15</x>
+      <y>24</y>
+    </operation>
+    <operation>
+      <id>38</id>
+      <template_id>None</template_id>
+      <name>Очистка секции</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>25</x>
+      <y>60</y>
+    </operation>
+    <operation>
+      <id>41</id>
+      <template_id>None</template_id>
+      <name>Окраска и сушка</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>50</x>
+      <y>15</y>
+    </operation>
+    <operation>
+      <id>46</id>
+      <template_id>None</template_id>
+      <name>Расходный склад стали</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>78</x>
+      <y>14</y>
+    </operation>
+    <operation>
+      <id>47</id>
+      <template_id>None</template_id>
+      <name>Передача секции в КСП</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>18</x>
+      <y>43</y>
+    </operation>
+    <operation>
+      <id>57</id>
+      <template_id>None</template_id>
+      <name>Передача СЕ на околодоковую площадку</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>85</x>
+      <y>79</y>
+    </operation>
+    <operation>
+      <id>58</id>
+      <template_id>None</template_id>
+      <name>Укрупнение и насыщение СЕ</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>92</x>
+      <y>9</y>
+    </operation>
+    <operation>
+      <id>61</id>
+      <template_id>None</template_id>
+      <name>Передача СЕ в сухой док (отгороженный)</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>52</x>
+      <y>12</y>
+    </operation>
+    <operation>
+      <id>62</id>
+      <template_id>None</template_id>
+      <name>Формирование кормовой части</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>84</x>
+      <y>93</y>
+    </operation>
+    <operation>
+      <id>63</id>
+      <template_id>None</template_id>
+      <name>Снятие затвора</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>71</x>
+      <y>12</y>
+    </operation>
+    <operation>
+      <id>64</id>
+      <template_id>None</template_id>
+      <name>Перевод кормовой части в сухой док</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>42</x>
+      <y>61</y>
+    </operation>
+    <operation>
+      <id>65</id>
+      <template_id>None</template_id>
+      <name>Установка затвора краном</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>41</x>
+      <y>85</y>
+    </operation>
+    <operation>
+      <id>66</id>
+      <template_id>None</template_id>
+      <name>Передача в КОП</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>6</x>
+      <y>56</y>
+    </operation>
+    <operation>
+      <id>67</id>
+      <template_id>None</template_id>
+      <name>Передача в 3-й пролёт</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>7</x>
+      <y>77</y>
+    </operation>
+    <operation>
+      <id>70</id>
+      <template_id>None</template_id>
+      <name>Резка листа на детали - УРЛ1</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>38</x>
+      <y>48</y>
+    </operation>
+    <operation>
+      <id>71</id>
+      <template_id>None</template_id>
+      <name>Фрезеровка под сварку - УЗК1</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>67</x>
+      <y>79</y>
+    </operation>
+    <operation>
+      <id>72</id>
+      <template_id>None</template_id>
+      <name>Передача деталей на УГЛ1</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>44</x>
+      <y>26</y>
+    </operation>
+    <operation>
+      <id>73</id>
+      <template_id>None</template_id>
+      <name>Передача деталей на УПС - МК6-7</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>68</x>
+      <y>16</y>
+    </operation>
+    <operation>
+      <id>74</id>
+      <template_id>None</template_id>
+      <name>Гибка деталей - УГЛ1</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>59</x>
+      <y>46</y>
+    </operation>
+    <operation>
+      <id>75</id>
+      <template_id>None</template_id>
+      <name>Передача деталей на УПС - МК6-7</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>69</x>
+      <y>68</y>
+    </operation>
+    <operation>
+      <id>76</id>
+      <template_id>None</template_id>
+      <name>Спуск судна</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>20</x>
+      <y>68</y>
+    </operation>
+    <operation>
+      <id>87</id>
+      <template_id>None</template_id>
+      <name>Передача листа на ЛПРОЛПП</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>0</x>
+      <y>10</y>
+    </operation>
+    <operation>
+      <id>88</id>
+      <template_id>None</template_id>
+      <name>Правка листа на вальцах</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>14</x>
+      <y>78</y>
+    </operation>
+    <operation>
+      <id>92</id>
+      <template_id>None</template_id>
+      <name>End Event</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>80</x>
+      <y>42</y>
+    </operation>
+    <operation>
+      <id>95</id>
+      <template_id>None</template_id>
+      <name>Комплектация</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>82</x>
+      <y>89</y>
+    </operation>
+    <operation>
+      <id>98</id>
+      <template_id>None</template_id>
+      <name>Комплектация</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>75</x>
+      <y>98</y>
+    </operation>
+    <operation>
+      <id>101</id>
+      <template_id>None</template_id>
+      <name>Передача на расходный склад стали</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>55</x>
+      <y>96</y>
+    </operation>
+    <operation>
+      <id>102</id>
+      <template_id>None</template_id>
+      <name>Предварительная обработка</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>56</x>
+      <y>91</y>
+    </operation>
+    <operation>
+      <id>104</id>
+      <template_id>None</template_id>
+      <name>Передача на расходный склад стали</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>60</x>
+      <y>3</y>
+    </operation>
+    <operation>
+      <id>105</id>
+      <template_id>None</template_id>
+      <name>Предварительная обработка</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>86</x>
+      <y>95</y>
+    </operation>
+    <operation>
+      <id>107</id>
+      <template_id>None</template_id>
+      <name>Передача на расходный склад стали</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>57</x>
+      <y>32</y>
+    </operation>
+    <operation>
+      <id>108</id>
+      <template_id>None</template_id>
+      <name>Предварительная обработка</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>66</x>
+      <y>84</y>
+    </operation>
+    <operation>
+      <id>112</id>
+      <template_id>None</template_id>
+      <name>Комплектация</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>37</x>
+      <y>88</y>
+    </operation>
+    <operation>
+      <id>167</id>
+      <template_id>None</template_id>
+      <name>Предварительная обработка</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>47</x>
+      <y>4</y>
+    </operation>
+    <operation>
+      <id>168</id>
+      <template_id>None</template_id>
+      <name>Передача на расходный склад стали</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>97</x>
+      <y>45</y>
+    </operation>
+    <operation>
+      <id>169</id>
+      <template_id>None</template_id>
+      <name>Предварительная обработка</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>0</x>
+      <y>65</y>
+    </operation>
+    <operation>
+      <id>170</id>
+      <template_id>None</template_id>
+      <name>Передача на расходный склад стали</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>93</x>
+      <y>97</y>
+    </operation>
+    <operation>
+      <id>171</id>
+      <template_id>None</template_id>
+      <name>Предварительная обработка</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>51</x>
+      <y>6</y>
+    </operation>
+    <operation>
+      <id>172</id>
+      <template_id>None</template_id>
+      <name>Передача на расходный склад стали</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>93</x>
+      <y>54</y>
+    </operation>
+    <operation>
+      <id>174</id>
+      <template_id>None</template_id>
+      <name>Правка профиля</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>32</x>
+      <y>50</y>
+    </operation>
+    <operation>
+      <id>175</id>
+      <template_id>None</template_id>
+      <name>Передача листа на ЛПРОЛПП</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>16</x>
+      <y>74</y>
+    </operation>
+    <operation>
+      <id>176</id>
+      <template_id>None</template_id>
+      <name>Передача на расходный склад стали</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>25</x>
+      <y>74</y>
+    </operation>
+    <operation>
+      <id>177</id>
+      <template_id>None</template_id>
+      <name>Предварительная обработка</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>95</x>
+      <y>77</y>
+    </operation>
+    <operation>
+      <id>178</id>
+      <template_id>None</template_id>
+      <name>Передача листа на ЛПРОЛПП</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>79</x>
+      <y>27</y>
+    </operation>
+    <operation>
+      <id>179</id>
+      <template_id>None</template_id>
+      <name>Правка профиля</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>87</x>
+      <y>36</y>
+    </operation>
+    <operation>
+      <id>198</id>
+      <template_id>None</template_id>
+      <name>Резка листа на полосы - МРМ1</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>81</x>
+      <y>71</y>
+    </operation>
+    <operation>
+      <id>199</id>
+      <template_id>None</template_id>
+      <name>Фрезеровка под сварку - УЗК2</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>19</x>
+      <y>20</y>
+    </operation>
+    <operation>
+      <id>200</id>
+      <template_id>None</template_id>
+      <name>Передача деталей на УПС</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>54</x>
+      <y>34</y>
+    </operation>
+    <operation>
+      <id>248</id>
+      <template_id>None</template_id>
+      <name>Передача деталей на УПС</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>28</x>
+      <y>33</y>
+    </operation>
+    <operation>
+      <id>249</id>
+      <template_id>None</template_id>
+      <name>Фрезеровка под сварку - УЗК4</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>49</x>
+      <y>93</y>
+    </operation>
+    <operation>
+      <id>250</id>
+      <template_id>None</template_id>
+      <name>Резка листа на полосы - МРМ2</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>30</x>
+      <y>76</y>
+    </operation>
+    <operation>
+      <id>251</id>
+      <template_id>None</template_id>
+      <name>Передача деталей на УПС - МК8-9</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>18</x>
+      <y>27</y>
+    </operation>
+    <operation>
+      <id>252</id>
+      <template_id>None</template_id>
+      <name>Гибка деталей - УГЛ2</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>86</x>
+      <y>51</y>
+    </operation>
+    <operation>
+      <id>253</id>
+      <template_id>None</template_id>
+      <name>Передача деталей на УПС - МК8-9</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>34</x>
+      <y>9</y>
+    </operation>
+    <operation>
+      <id>254</id>
+      <template_id>None</template_id>
+      <name>Передача деталей на УГЛ2</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>17</x>
+      <y>71</y>
+    </operation>
+    <operation>
+      <id>255</id>
+      <template_id>None</template_id>
+      <name>Фрезеровка под сварку - УЗК3</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>90</x>
+      <y>44</y>
+    </operation>
+    <operation>
+      <id>256</id>
+      <template_id>None</template_id>
+      <name>Резка листа на детали - УРЛ2</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>81</x>
+      <y>5</y>
+    </operation>
+    <operation>
+      <id>257</id>
+      <template_id>None</template_id>
+      <name>Передача в 4-й пролёт</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>74</x>
+      <y>98</y>
+    </operation>
+    <operation>
+      <id>274</id>
+      <template_id>None</template_id>
+      <name>Передача в 5-й пролёт</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>76</x>
+      <y>57</y>
+    </operation>
+    <operation>
+      <id>275</id>
+      <template_id>None</template_id>
+      <name>Резка листа на детали - УРЛ3</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>32</x>
+      <y>1</y>
+    </operation>
+    <operation>
+      <id>276</id>
+      <template_id>None</template_id>
+      <name>Фрезеровка под сварку - УЗК5</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>56</x>
+      <y>18</y>
+    </operation>
+    <operation>
+      <id>277</id>
+      <template_id>None</template_id>
+      <name>Передача деталей на УГЛ3</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>4</x>
+      <y>60</y>
+    </operation>
+    <operation>
+      <id>278</id>
+      <template_id>None</template_id>
+      <name>Передача деталей на УПС - МК10-11</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>26</x>
+      <y>86</y>
+    </operation>
+    <operation>
+      <id>279</id>
+      <template_id>None</template_id>
+      <name>Гибка деталей - УГЛ3</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>72</x>
+      <y>99</y>
+    </operation>
+    <operation>
+      <id>280</id>
+      <template_id>None</template_id>
+      <name>Передача деталей на УПС - МК10-11</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>60</x>
+      <y>48</y>
+    </operation>
+    <operation>
+      <id>281</id>
+      <template_id>None</template_id>
+      <name>Резка листа на полосы - МРМ3</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>64</x>
+      <y>63</y>
+    </operation>
+    <operation>
+      <id>282</id>
+      <template_id>None</template_id>
+      <name>Фрезеровка под сварку - УЗК6</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>6</x>
+      <y>56</y>
+    </operation>
+    <operation>
+      <id>283</id>
+      <template_id>None</template_id>
+      <name>Передача деталей на УПС</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>51</x>
+      <y>40</y>
+    </operation>
+    <operation>
+      <id>308</id>
+      <template_id>None</template_id>
+      <name>Передача деталей в ССЦ - МК</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>92</x>
+      <y>63</y>
+    </operation>
+    <operation>
+      <id>309</id>
+      <template_id>None</template_id>
+      <name>Передача деталей в ССЦ - СТ</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>48</x>
+      <y>54</y>
+    </operation>
+    <operation>
+      <id>312</id>
+      <template_id>None</template_id>
+      <name>Передача деталей в 1-й пролёт - МК</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>0</x>
+      <y>49</y>
+    </operation>
+    <operation>
+      <id>316</id>
+      <template_id>None</template_id>
+      <name>Передача деталей (полосы) в 4-й пролёт - МК</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>88</x>
+      <y>44</y>
+    </operation>
+    <operation>
+      <id>324</id>
+      <template_id>None</template_id>
+      <name>Сборка и сварка Т- и Г- образных балок</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>48</x>
+      <y>36</y>
+    </operation>
+    <operation>
+      <id>325</id>
+      <template_id>None</template_id>
+      <name>Передача Т- и Г- образных балок на линию - МК+СТ</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>10</x>
+      <y>36</y>
+    </operation>
+    <operation>
+      <id>328</id>
+      <template_id>None</template_id>
+      <name>Передача Т- и Г- образных балок на линию - МК18-19</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>53</x>
+      <y>88</y>
+    </operation>
+    <operation>
+      <id>333</id>
+      <template_id>None</template_id>
+      <name>Сборка и сварка плоских секций - ЛИПС1</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>57</x>
+      <y>61</y>
+    </operation>
+    <operation>
+      <id>335</id>
+      <template_id>None</template_id>
+      <name>Передача секции в ОП - МК18-19</name>
+      <volume>100</volume>
+      <stream>30</stream>
+      <x>0</x>
+      <y>19</y>
+    </operation>
+    <graph>
+      <edge from="2" to="19">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="2" to="33">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="2" to="10">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="2" to="3">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="3" to="9">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="4" to="5">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="5" to="105">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="6" to="7">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="7" to="34">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="8" to="66">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="9" to="21">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="10" to="88">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="10" to="108">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="14" to="38">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="17" to="24">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="18" to="66">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="19" to="17">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="21" to="4">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="21" to="6">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="24" to="177">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="24" to="179">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="25" to="66">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="28" to="66">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="30" to="66">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="32" to="66">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="33" to="174">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="33" to="167">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="34" to="66">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="38" to="41">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="41" to="47">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="46" to="66">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="47" to="57">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="57" to="58">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="58" to="61">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="61" to="62">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="62" to="63">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="63" to="64">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="64" to="65">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="65" to="76">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="66" to="257">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="66" to="274">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="66" to="67">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="67" to="198">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="67" to="70">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="70" to="71">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="71" to="72">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="71" to="73">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="72" to="74">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="73" to="95">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="74" to="75">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="75" to="95">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="76" to="92">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="87" to="102">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="88" to="87">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="95" to="308">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="98" to="308">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="101" to="18">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="102" to="101">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="104" to="32">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="105" to="104">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="107" to="28">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="108" to="107">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="112" to="308">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="167" to="168">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="168" to="25">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="169" to="170">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="170" to="8">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="171" to="172">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="172" to="46">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="174" to="175">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="175" to="171">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="176" to="30">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="177" to="176">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="178" to="169">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="179" to="178">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="198" to="199">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="199" to="200">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="200" to="95">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="248" to="112">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="249" to="248">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="250" to="249">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="251" to="112">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="252" to="251">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="253" to="112">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="254" to="252">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="255" to="253">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="255" to="254">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="256" to="255">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="257" to="256">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="257" to="250">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="274" to="281">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="274" to="275">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="275" to="276">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="276" to="277">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="276" to="278">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="277" to="279">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="278" to="98">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="279" to="280">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="280" to="98">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="281" to="282">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="282" to="283">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="283" to="98">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="308" to="309">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="309" to="312">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="309" to="316">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="312" to="333">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="316" to="324">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="324" to="325">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="325" to="328">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="328" to="333">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="333" to="335">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="335" to="14">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+    </graph>
+  </process>
+  <productivity>
+    <resource ID="1">
+      <job ID="2">
+        <value>5</value>
+      </job>
+      <job ID="3">
+        <value>5</value>
+      </job>
+      <job ID="4">
+        <value>5</value>
+      </job>
+      <job ID="5">
+        <value>5</value>
+      </job>
+      <job ID="6">
+        <value>5</value>
+      </job>
+      <job ID="7">
+        <value>5</value>
+      </job>
+      <job ID="8">
+        <value>5</value>
+      </job>
+      <job ID="9">
+        <value>5</value>
+      </job>
+      <job ID="10">
+        <value>5</value>
+      </job>
+      <job ID="14">
+        <value>5</value>
+      </job>
+      <job ID="17">
+        <value>5</value>
+      </job>
+      <job ID="18">
+        <value>5</value>
+      </job>
+      <job ID="19">
+        <value>5</value>
+      </job>
+      <job ID="21">
+        <value>5</value>
+      </job>
+      <job ID="24">
+        <value>5</value>
+      </job>
+      <job ID="25">
+        <value>5</value>
+      </job>
+      <job ID="28">
+        <value>5</value>
+      </job>
+      <job ID="30">
+        <value>5</value>
+      </job>
+      <job ID="32">
+        <value>5</value>
+      </job>
+      <job ID="33">
+        <value>5</value>
+      </job>
+      <job ID="34">
+        <value>5</value>
+      </job>
+      <job ID="38">
+        <value>5</value>
+      </job>
+      <job ID="41">
+        <value>5</value>
+      </job>
+      <job ID="46">
+        <value>5</value>
+      </job>
+      <job ID="47">
+        <value>5</value>
+      </job>
+      <job ID="57">
+        <value>5</value>
+      </job>
+      <job ID="58">
+        <value>5</value>
+      </job>
+      <job ID="61">
+        <value>5</value>
+      </job>
+      <job ID="62">
+        <value>5</value>
+      </job>
+      <job ID="63">
+        <value>5</value>
+      </job>
+      <job ID="64">
+        <value>5</value>
+      </job>
+      <job ID="65">
+        <value>5</value>
+      </job>
+      <job ID="66">
+        <value>5</value>
+      </job>
+      <job ID="67">
+        <value>5</value>
+      </job>
+      <job ID="70">
+        <value>5</value>
+      </job>
+      <job ID="71">
+        <value>5</value>
+      </job>
+      <job ID="72">
+        <value>5</value>
+      </job>
+      <job ID="73">
+        <value>5</value>
+      </job>
+      <job ID="74">
+        <value>5</value>
+      </job>
+      <job ID="75">
+        <value>5</value>
+      </job>
+      <job ID="76">
+        <value>5</value>
+      </job>
+      <job ID="87">
+        <value>5</value>
+      </job>
+      <job ID="88">
+        <value>5</value>
+      </job>
+      <job ID="92">
+        <value>5</value>
+      </job>
+      <job ID="95">
+        <value>5</value>
+      </job>
+      <job ID="98">
+        <value>5</value>
+      </job>
+      <job ID="101">
+        <value>5</value>
+      </job>
+      <job ID="102">
+        <value>5</value>
+      </job>
+      <job ID="104">
+        <value>5</value>
+      </job>
+      <job ID="105">
+        <value>5</value>
+      </job>
+      <job ID="107">
+        <value>5</value>
+      </job>
+      <job ID="108">
+        <value>5</value>
+      </job>
+      <job ID="112">
+        <value>5</value>
+      </job>
+      <job ID="167">
+        <value>5</value>
+      </job>
+      <job ID="168">
+        <value>5</value>
+      </job>
+      <job ID="169">
+        <value>5</value>
+      </job>
+      <job ID="170">
+        <value>5</value>
+      </job>
+      <job ID="171">
+        <value>5</value>
+      </job>
+      <job ID="172">
+        <value>5</value>
+      </job>
+      <job ID="174">
+        <value>5</value>
+      </job>
+      <job ID="175">
+        <value>5</value>
+      </job>
+      <job ID="176">
+        <value>5</value>
+      </job>
+      <job ID="177">
+        <value>5</value>
+      </job>
+      <job ID="178">
+        <value>5</value>
+      </job>
+      <job ID="179">
+        <value>5</value>
+      </job>
+      <job ID="198">
+        <value>5</value>
+      </job>
+      <job ID="199">
+        <value>5</value>
+      </job>
+      <job ID="200">
+        <value>5</value>
+      </job>
+      <job ID="248">
+        <value>5</value>
+      </job>
+      <job ID="249">
+        <value>5</value>
+      </job>
+      <job ID="250">
+        <value>5</value>
+      </job>
+      <job ID="251">
+        <value>5</value>
+      </job>
+      <job ID="252">
+        <value>5</value>
+      </job>
+      <job ID="253">
+        <value>5</value>
+      </job>
+      <job ID="254">
+        <value>5</value>
+      </job>
+      <job ID="255">
+        <value>5</value>
+      </job>
+      <job ID="256">
+        <value>5</value>
+      </job>
+      <job ID="257">
+        <value>5</value>
+      </job>
+      <job ID="274">
+        <value>5</value>
+      </job>
+      <job ID="275">
+        <value>5</value>
+      </job>
+      <job ID="276">
+        <value>5</value>
+      </job>
+      <job ID="277">
+        <value>5</value>
+      </job>
+      <job ID="278">
+        <value>5</value>
+      </job>
+      <job ID="279">
+        <value>5</value>
+      </job>
+      <job ID="280">
+        <value>5</value>
+      </job>
+      <job ID="281">
+        <value>5</value>
+      </job>
+      <job ID="282">
+        <value>5</value>
+      </job>
+      <job ID="283">
+        <value>5</value>
+      </job>
+      <job ID="308">
+        <value>5</value>
+      </job>
+      <job ID="309">
+        <value>5</value>
+      </job>
+      <job ID="312">
+        <value>5</value>
+      </job>
+      <job ID="316">
+        <value>5</value>
+      </job>
+      <job ID="324">
+        <value>5</value>
+      </job>
+      <job ID="325">
+        <value>5</value>
+      </job>
+      <job ID="328">
+        <value>5</value>
+      </job>
+      <job ID="333">
+        <value>5</value>
+      </job>
+      <job ID="335">
+        <value>5</value>
+      </job>
+    </resource>
+    <resource ID="2">
+      <job ID="2">
+        <value>5</value>
+      </job>
+      <job ID="3">
+        <value>5</value>
+      </job>
+      <job ID="4">
+        <value>5</value>
+      </job>
+      <job ID="5">
+        <value>5</value>
+      </job>
+      <job ID="6">
+        <value>5</value>
+      </job>
+      <job ID="7">
+        <value>5</value>
+      </job>
+      <job ID="8">
+        <value>5</value>
+      </job>
+      <job ID="9">
+        <value>5</value>
+      </job>
+      <job ID="10">
+        <value>5</value>
+      </job>
+      <job ID="14">
+        <value>5</value>
+      </job>
+      <job ID="17">
+        <value>5</value>
+      </job>
+      <job ID="18">
+        <value>5</value>
+      </job>
+      <job ID="19">
+        <value>5</value>
+      </job>
+      <job ID="21">
+        <value>5</value>
+      </job>
+      <job ID="24">
+        <value>5</value>
+      </job>
+      <job ID="25">
+        <value>5</value>
+      </job>
+      <job ID="28">
+        <value>5</value>
+      </job>
+      <job ID="30">
+        <value>5</value>
+      </job>
+      <job ID="32">
+        <value>5</value>
+      </job>
+      <job ID="33">
+        <value>5</value>
+      </job>
+      <job ID="34">
+        <value>5</value>
+      </job>
+      <job ID="38">
+        <value>5</value>
+      </job>
+      <job ID="41">
+        <value>5</value>
+      </job>
+      <job ID="46">
+        <value>5</value>
+      </job>
+      <job ID="47">
+        <value>5</value>
+      </job>
+      <job ID="57">
+        <value>5</value>
+      </job>
+      <job ID="58">
+        <value>5</value>
+      </job>
+      <job ID="61">
+        <value>5</value>
+      </job>
+      <job ID="62">
+        <value>5</value>
+      </job>
+      <job ID="63">
+        <value>5</value>
+      </job>
+      <job ID="64">
+        <value>5</value>
+      </job>
+      <job ID="65">
+        <value>5</value>
+      </job>
+      <job ID="66">
+        <value>5</value>
+      </job>
+      <job ID="67">
+        <value>5</value>
+      </job>
+      <job ID="70">
+        <value>5</value>
+      </job>
+      <job ID="71">
+        <value>5</value>
+      </job>
+      <job ID="72">
+        <value>5</value>
+      </job>
+      <job ID="73">
+        <value>5</value>
+      </job>
+      <job ID="74">
+        <value>5</value>
+      </job>
+      <job ID="75">
+        <value>5</value>
+      </job>
+      <job ID="76">
+        <value>5</value>
+      </job>
+      <job ID="87">
+        <value>5</value>
+      </job>
+      <job ID="88">
+        <value>5</value>
+      </job>
+      <job ID="92">
+        <value>5</value>
+      </job>
+      <job ID="95">
+        <value>5</value>
+      </job>
+      <job ID="98">
+        <value>5</value>
+      </job>
+      <job ID="101">
+        <value>5</value>
+      </job>
+      <job ID="102">
+        <value>5</value>
+      </job>
+      <job ID="104">
+        <value>5</value>
+      </job>
+      <job ID="105">
+        <value>5</value>
+      </job>
+      <job ID="107">
+        <value>5</value>
+      </job>
+      <job ID="108">
+        <value>5</value>
+      </job>
+      <job ID="112">
+        <value>5</value>
+      </job>
+      <job ID="167">
+        <value>5</value>
+      </job>
+      <job ID="168">
+        <value>5</value>
+      </job>
+      <job ID="169">
+        <value>5</value>
+      </job>
+      <job ID="170">
+        <value>5</value>
+      </job>
+      <job ID="171">
+        <value>5</value>
+      </job>
+      <job ID="172">
+        <value>5</value>
+      </job>
+      <job ID="174">
+        <value>5</value>
+      </job>
+      <job ID="175">
+        <value>5</value>
+      </job>
+      <job ID="176">
+        <value>5</value>
+      </job>
+      <job ID="177">
+        <value>5</value>
+      </job>
+      <job ID="178">
+        <value>5</value>
+      </job>
+      <job ID="179">
+        <value>5</value>
+      </job>
+      <job ID="198">
+        <value>5</value>
+      </job>
+      <job ID="199">
+        <value>5</value>
+      </job>
+      <job ID="200">
+        <value>5</value>
+      </job>
+      <job ID="248">
+        <value>5</value>
+      </job>
+      <job ID="249">
+        <value>5</value>
+      </job>
+      <job ID="250">
+        <value>5</value>
+      </job>
+      <job ID="251">
+        <value>5</value>
+      </job>
+      <job ID="252">
+        <value>5</value>
+      </job>
+      <job ID="253">
+        <value>5</value>
+      </job>
+      <job ID="254">
+        <value>5</value>
+      </job>
+      <job ID="255">
+        <value>5</value>
+      </job>
+      <job ID="256">
+        <value>5</value>
+      </job>
+      <job ID="257">
+        <value>5</value>
+      </job>
+      <job ID="274">
+        <value>5</value>
+      </job>
+      <job ID="275">
+        <value>5</value>
+      </job>
+      <job ID="276">
+        <value>5</value>
+      </job>
+      <job ID="277">
+        <value>5</value>
+      </job>
+      <job ID="278">
+        <value>5</value>
+      </job>
+      <job ID="279">
+        <value>5</value>
+      </job>
+      <job ID="280">
+        <value>5</value>
+      </job>
+      <job ID="281">
+        <value>5</value>
+      </job>
+      <job ID="282">
+        <value>5</value>
+      </job>
+      <job ID="283">
+        <value>5</value>
+      </job>
+      <job ID="308">
+        <value>5</value>
+      </job>
+      <job ID="309">
+        <value>5</value>
+      </job>
+      <job ID="312">
+        <value>5</value>
+      </job>
+      <job ID="316">
+        <value>5</value>
+      </job>
+      <job ID="324">
+        <value>5</value>
+      </job>
+      <job ID="325">
+        <value>5</value>
+      </job>
+      <job ID="328">
+        <value>5</value>
+      </job>
+      <job ID="333">
+        <value>5</value>
+      </job>
+      <job ID="335">
+        <value>5</value>
+      </job>
+    </resource>
+  </productivity>
+</dynamicmodel>

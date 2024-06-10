@@ -1,0 +1,718 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dynamicmodel>
+    <name>monsg.xml</name>
+    <duration>90</duration>
+    <cluster>
+        <id>1</id>
+        <name>Кластер</name>
+        <resource>
+            <id>RS_1</id>
+            <template_id>cec35378-5f93-11e9-9e1e-8c8590eef8e2</template_id>
+            <name>КА</name>
+            <capacity>1</capacity>
+            <power>10.0</power>
+            <price>10.0</price>
+        </resource>
+        <resource>
+            <id>RS_2</id>
+            <template_id>cec358f0-5f93-11e9-baa4-8c8590eef8e2</template_id>
+            <name>ППОИ №1</name>
+            <capacity>1</capacity>
+            <power>4.0</power>
+            <price>50.0</price>
+        </resource>
+        <resource>
+            <id>RS_3</id>
+            <template_id>cec35dd2-5f93-11e9-9b83-8c8590eef8e2</template_id>
+            <name>ППОИ №2</name>
+            <capacity>1</capacity>
+            <power>50.0</power>
+            <price>100.0</price>
+        </resource>
+    </cluster>
+    <coefficients>
+        <integrity>0</integrity>
+        <uniform>0</uniform>
+        <fine>0</fine>
+        <cost>0.53</cost>
+        <flow>0</flow>
+        <interrupt>0</interrupt>
+        <time>0.47</time>
+    </coefficients>
+    <process>
+        <id>1</id>
+        <operation>
+            <id>_3</id>
+            <template_id>cec37206-5f93-11e9-9d10-8c8590eef8e2</template_id>
+            <name>Приём (1)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>79.02941176470584</x>
+            <y>810.0882352941176</y>
+        </operation>
+        <operation>
+            <id>_7</id>
+            <template_id>cec3860c-5f93-11e9-9a90-8c8590eef8e2</template_id>
+            <name>Передача КА-ППОИ1 (6)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>210.16666666666663</x>
+            <y>660.3333333333334</y>
+        </operation>
+        <operation>
+            <id>_8</id>
+            <template_id>cec39cc0-5f93-11e9-8041-8c8590eef8e2</template_id>
+            <name>Первичная обработка (2)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>450.49999999999994</x>
+            <y>810</y>
+        </operation>
+        <operation>
+            <id>_9</id>
+            <template_id>cec3b028-5f93-11e9-b80c-8c8590eef8e2</template_id>
+            <name>Передача КА-ППОИ2 (20)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>210.49999999999994</x>
+            <y>1369.6666666666667</y>
+        </operation>
+        <operation>
+            <id>_13</id>
+            <template_id>cec3c600-5f93-11e9-8e0a-8c8590eef8e2</template_id>
+            <name>Первичная обработка (21)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>470.16666666666663</x>
+            <y>1370.3333333333335</y>
+        </operation>
+        <operation>
+            <id>_17</id>
+            <template_id>cec3d94c-5f93-11e9-9528-8c8590eef8e2</template_id>
+            <name>Передача ППОИ1-ППОИ2 (15)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>349.8333333333333</x>
+            <y>1040.3333333333335</y>
+        </operation>
+        <operation>
+            <id>_24</id>
+            <template_id>cec3f44a-5f93-11e9-931d-8c8590eef8e2</template_id>
+            <name>Первичная обработка (7)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>360.49999999999994</x>
+            <y>390.33333333333337</y>
+        </operation>
+        <operation>
+            <id>_28</id>
+            <template_id>cec42106-5f93-11e9-ab47-8c8590eef8e2</template_id>
+            <name>Передача ППОИ2-ППОИ1 (24)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>1250.1666666666665</x>
+            <y>960</y>
+        </operation>
+        <operation>
+            <id>_32</id>
+            <template_id>cec44850-5f93-11e9-9a5f-8c8590eef8e2</template_id>
+            <name>Вторичная обработка (8)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>1390.1666666666665</x>
+            <y>590</y>
+        </operation>
+        <operation>
+            <id>_39</id>
+            <template_id>cec47d18-5f93-11e9-ad5d-8c8590eef8e2</template_id>
+            <name>Передача ППОИ1-ППОИ2 (10)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>949.5</x>
+            <y>1120</y>
+        </operation>
+        <operation>
+            <id>_41</id>
+            <template_id>cec4a6c6-5f93-11e9-af2a-8c8590eef8e2</template_id>
+            <name>Вторичная обработка (22)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>1389.5</x>
+            <y>1229.6666666666667</y>
+        </operation>
+        <operation>
+            <id>_48</id>
+            <template_id>cec4cf28-5f93-11e9-a16c-8c8590eef8e2</template_id>
+            <name>Передача КА-ППОИ1 (16)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>590.3700787401575</x>
+            <y>589.6299212598426</y>
+        </operation>
+        <operation>
+            <id>_52</id>
+            <template_id>cec4f976-5f93-11e9-bdfa-8c8590eef8e2</template_id>
+            <name>Вторичная обработка (2)</name>
+            <volume>30</volume>
+            <stream>20</stream>
+            <x>1390.1312335958005</x>
+            <y>810.0813648293964</y>
+        </operation>
+        <operation>
+            <id>_55</id>
+            <template_id>cec51f0a-5f93-11e9-bc22-8c8590eef8e2</template_id>
+            <name>Передача КА-ППОИ2 (18)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>580.1417322834646</x>
+            <y>960.0131233595802</y>
+        </operation>
+        <operation>
+            <id>_59</id>
+            <template_id>cec53d8c-5f93-11e9-a755-8c8590eef8e2</template_id>
+            <name>Передача ППОИ1-КА (11)</name>
+            <volume>20</volume>
+            <stream>10</stream>
+            <x>1049.716535433071</x>
+            <y>699.9422572178479</y>
+        </operation>
+        <operation>
+            <id>_62</id>
+            <template_id>cec55c54-5f93-11e9-b263-8c8590eef8e2</template_id>
+            <name>Передача ППОИ2-КА (25)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>1050.4015748031497</x>
+            <y>959.7007874015749</y>
+        </operation>
+        <operation>
+            <id>_66</id>
+            <template_id>cec5811e-5f93-11e9-a1da-8c8590eef8e2</template_id>
+            <name>Формирование управления (4)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>2490.259842519685</x>
+            <y>809.732283464567</y>
+        </operation>
+        <operation>
+            <id>_71</id>
+            <template_id>cec5a902-5f93-11e9-a339-8c8590eef8e2</template_id>
+            <name>Формирование управления (9)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>1910.2677165354332</x>
+            <y>230.4435695538058</y>
+        </operation>
+        <operation>
+            <id>_77</id>
+            <template_id>cec5e39a-5f93-11e9-ac84-8c8590eef8e2</template_id>
+            <name>Передача ППОИ2-ППОИ1 (28)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>1529.5013123359581</x>
+            <y>149.69553805774285</y>
+        </operation>
+        <operation>
+            <id>_82</id>
+            <template_id>cec611c6-5f93-11e9-826d-8c8590eef8e2</template_id>
+            <name>Передача КА-ППОИ1 (17)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>1819.9921259842522</x>
+            <y>690.1784776902888</y>
+        </operation>
+        <operation>
+            <id>_85</id>
+            <template_id>cec644fa-5f93-11e9-a5bd-8c8590eef8e2</template_id>
+            <name>Передача ППОИ1-ППОИ2 (12)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>1620.02624671916</x>
+            <y>690.1548556430447</y>
+        </operation>
+        <operation>
+            <id>_87</id>
+            <template_id>cec66a2c-5f93-11e9-917e-8c8590eef8e2</template_id>
+            <name>Формирование управления (23)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>1799.7191601049872</x>
+            <y>1040.3202099737534</y>
+        </operation>
+        <operation>
+            <id>_93</id>
+            <template_id>cec68f0c-5f93-11e9-b276-8c8590eef8e2</template_id>
+            <name>Передача КА-ППОИ2 (19)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>1820.2887139107615</x>
+            <y>910.1443569553807</y>
+        </operation>
+        <operation>
+            <id>_14</id>
+            <template_id>cec6a500-5f93-11e9-8eb8-8c8590eef8e2</template_id>
+            <name>Передача ППОИ1-КА (13)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>2089.8447839104783</x>
+            <y>589.5055242996893</y>
+        </operation>
+        <operation>
+            <id>_56</id>
+            <template_id>cec6b7de-5f93-11e9-b24d-8c8590eef8e2</template_id>
+            <name>Передача ППОИ2-КА (27)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>2489.8435129106156</x>
+            <y>1040.0530913965522</y>
+        </operation>
+        <operation>
+            <id>_99</id>
+            <template_id>cec6cc9c-5f93-11e9-b9d9-8c8590eef8e2</template_id>
+            <name>Передача ППОИ1-КА (30)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>2490.1389533575652</x>
+            <y>400.2478082835226</y>
+        </operation>
+        <operation>
+            <id>_105</id>
+            <template_id>cec6e13a-5f93-11e9-838f-8c8590eef8e2</template_id>
+            <name>Передача ППОИ2-ППОИ1 (29)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>2090.337353110995</x>
+            <y>460.3442134771109</y>
+        </operation>
+        <operation>
+            <id>_108</id>
+            <template_id>cec6f4cc-5f93-11e9-abd3-8c8590eef8e2</template_id>
+            <name>Передача ППОИ1-ППОИ2 (14)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>2089.875647975145</x>
+            <y>689.7446958504303</y>
+        </operation>
+        <operation>
+            <id>_111</id>
+            <template_id>cec708f6-5f93-11e9-be45-8c8590eef8e2</template_id>
+            <name>Реализация управления (5)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>2750</x>
+            <y>810</y>
+        </operation>
+        <operation>
+            <id>_97</id>
+            <template_id>cec71bc0-5f93-11e9-89de-8c8590eef8e2</template_id>
+            <name>7-8</name>
+            <volume>100</volume>
+            <stream>1</stream>
+            <x>1250</x>
+            <y>460</y>
+        </operation>
+        <operation>
+            <id>_121</id>
+            <template_id>cec73088-5f93-11e9-916e-8c8590eef8e2</template_id>
+            <name>8-9</name>
+            <volume>100</volume>
+            <stream>1</stream>
+            <x>1620</x>
+            <y>460</y>
+        </operation>
+        <operation>
+            <id>_124</id>
+            <template_id>cec744c6-5f93-11e9-9156-8c8590eef8e2</template_id>
+            <name>9-30</name>
+            <volume>100</volume>
+            <stream>1</stream>
+            <x>2090</x>
+            <y>330</y>
+        </operation>
+        <operation>
+            <id>_127</id>
+            <template_id>cec7593a-5f93-11e9-8d74-8c8590eef8e2</template_id>
+            <name>23-27</name>
+            <volume>100</volume>
+            <stream>1</stream>
+            <x>2100</x>
+            <y>1040</y>
+        </operation>
+        <operation>
+            <id>_133</id>
+            <template_id>cec79186-5f93-11e9-9b11-8c8590eef8e2</template_id>
+            <name>Передача ППОИ2-КА (26)</name>
+            <volume>100</volume>
+            <stream>20</stream>
+            <x>1670</x>
+            <y>1370</y>
+        </operation>
+        <operation>
+            <id>_136</id>
+            <template_id>cec7bd78-5f93-11e9-8023-8c8590eef8e2</template_id>
+            <name>21-22</name>
+            <volume>100</volume>
+            <stream>1</stream>
+            <x>1170</x>
+            <y>1370</y>
+        </operation>
+        <operation>
+            <id>_130</id>
+            <template_id>cec828a8-5f93-11e9-860d-8c8590eef8e2</template_id>
+            <name>22-23</name>
+            <volume>100</volume>
+            <stream>1</stream>
+            <x>1670</x>
+            <y>1230</y>
+        </operation>
+        <operation>
+            <id>_34</id>
+            <template_id>cec84506-5f93-11e9-a42d-8c8590eef8e2</template_id>
+            <name>2-3</name>
+            <volume>100</volume>
+            <stream>1</stream>
+            <x>800</x>
+            <y>810</y>
+        </operation>
+        <operation>
+            <id>_54</id>
+            <template_id>cec85e06-5f93-11e9-b044-8c8590eef8e2</template_id>
+            <name>3-4</name>
+            <volume>100</volume>
+            <stream>1</stream>
+            <x>2090</x>
+            <y>810</y>
+        </operation>
+        <graph>
+            <edge from="_3" to="_7">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_3" to="_8">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_3" to="_9">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_7" to="_17">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_7" to="_24">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_8" to="_48">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_8" to="_55">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_8" to="_34">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_9" to="_13">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_13" to="_28">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_13" to="_62">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_13" to="_136">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_17" to="_13">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_24" to="_39">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_24" to="_59">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_24" to="_97">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_28" to="_32">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_32" to="_85">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_32" to="_14">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_32" to="_121">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_39" to="_41">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_41" to="_77">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_41" to="_133">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_41" to="_130">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_48" to="_32">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_52" to="_93">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_52" to="_82">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_52" to="_54">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_55" to="_41">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_59" to="_52">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_62" to="_52">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_66" to="_111">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_71" to="_108">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_71" to="_124">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_77" to="_71">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_82" to="_71">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_85" to="_87">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_87" to="_105">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_87" to="_127">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_93" to="_87">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_14" to="_66">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_56" to="_111">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_99" to="_111">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_105" to="_99">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_108" to="_56">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_97" to="_32">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_121" to="_71">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_124" to="_99">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_127" to="_56">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_133" to="_66">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_136" to="_41">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_130" to="_87">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_34" to="_52">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+            <edge from="_54" to="_66">
+                <fwd>1</fwd>
+                <rev>1</rev>
+            </edge>
+        </graph>
+    </process>
+    <productivity>
+        <resource ID="RS_1">
+            <job ID="_3">
+                <value>100</value>
+            </job>
+            <job ID="_7">
+                <value>100</value>
+            </job>
+            <job ID="_9">
+                <value>100</value>
+            </job>
+            <job ID="_48">
+                <value>100</value>
+            </job>
+            <job ID="_52">
+                <value>100</value>
+            </job>
+            <job ID="_55">
+                <value>100</value>
+            </job>
+            <job ID="_66">
+                <value>100</value>
+            </job>
+            <job ID="_82">
+                <value>100</value>
+            </job>
+            <job ID="_93">
+                <value>100</value>
+            </job>
+            <job ID="_111">
+                <value>100</value>
+            </job>
+            <job ID="_34">
+                <value>100</value>
+            </job>
+            <job ID="_54">
+                <value>100</value>
+            </job>
+        </resource>
+        <resource ID="RS_2">
+            <job ID="_17">
+                <value>100</value>
+            </job>
+            <job ID="_24">
+                <value>100</value>
+            </job>
+            <job ID="_32">
+                <value>100</value>
+            </job>
+            <job ID="_39">
+                <value>100</value>
+            </job>
+            <job ID="_59">
+                <value>100</value>
+            </job>
+            <job ID="_71">
+                <value>100</value>
+            </job>
+            <job ID="_85">
+                <value>100</value>
+            </job>
+            <job ID="_99">
+                <value>100</value>
+            </job>
+            <job ID="_108">
+                <value>100</value>
+            </job>
+            <job ID="_97">
+                <value>100</value>
+            </job>
+            <job ID="_121">
+                <value>100</value>
+            </job>
+            <job ID="_124">
+                <value>100</value>
+            </job>
+        </resource>
+        <resource ID="RS_3">
+            <job ID="_13">
+                <value>100</value>
+            </job>
+            <job ID="_28">
+                <value>100</value>
+            </job>
+            <job ID="_41">
+                <value>100</value>
+            </job>
+            <job ID="_62">
+                <value>100</value>
+            </job>
+            <job ID="_77">
+                <value>100</value>
+            </job>
+            <job ID="_87">
+                <value>100</value>
+            </job>
+            <job ID="_56">
+                <value>100</value>
+            </job>
+            <job ID="_127">
+                <value>100</value>
+            </job>
+            <job ID="_133">
+                <value>100</value>
+            </job>
+            <job ID="_136">
+                <value>100</value>
+            </job>
+            <job ID="_130">
+                <value>100</value>
+            </job>
+        </resource>
+    </productivity>
+</dynamicmodel>

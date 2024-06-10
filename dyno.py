@@ -32,7 +32,9 @@ from uuid import uuid1
 from copy import deepcopy
 from functools import reduce
 import yaml
-#import inspect
+import inspect
+import csv
+import json
 
 import networkx as nx
 from lxml import etree  # http://www.lfd.uci.edu/~gohlke/pythonlibs/
@@ -43,6 +45,45 @@ import click                # CLI
 
 insp = {}
 i = 0
+
+# Для записи в csv приоритетов операций
+
+import os
+import shutil
+
+
+QltTemplate = {
+            "J0": [1],
+            "J1": [0],
+            "J2": [0.5],
+            "J3": [0],
+            "J4": [0],
+            "J5": [0],
+            "J6": [0],
+            "J7": [0.5],
+            "J8": [0],
+            "J9": [0]
+        }
+
+dir_name_ID = 'zakharov_ID'
+template_file = os.path.join(dir_name_ID, 'Qlt.json')
+if not os.path.exists(dir_name_ID):
+    os.makedirs(dir_name_ID)
+    with open(template_file, 'w') as f:
+        json.dump(QltTemplate, f)
+
+
+# папка перезаписывается
+dir_name = 'zakharov_RESULT'
+if os.path.exists(dir_name):
+    shutil.rmtree(dir_name)
+os.makedirs(dir_name)
+
+index_ham = 0
+ham_file = open(os.path.join(dir_name, 'hamiltonian_1.csv'), 'w')
+csv_data = [['time', 'Job','Res','C', 'solution']]
+time_pred = 1
+
 
 # Константы (для тестирования)
 DEBUG = False
@@ -132,6 +173,7 @@ class GrandSolver(object):
         # - штраф за выполнение операции op_id с момента времени startTime и значением. Ступенчатая функция
         self.penalty = {}
 
+
         # self.res_availability - Матрица потенциала доступности ресурса: [res_id] = [(startTime, 0/1), ...]
         # - доступность ресурса res_id в промежуток времени от startTime до следующего значения
         self.res_availability = {}
@@ -163,6 +205,9 @@ class GrandSolver(object):
             "J8": [0],
             "J9": [0]
         }
+        if os.path.exists(template_file):
+            with open(template_file) as file:
+                self.QltList = json.load(file)
 
         # Число клонов модели, которые необходимо создать при планировании
         self.Threads = None
@@ -194,6 +239,9 @@ class GrandSolver(object):
         self.Schedule = {}
 
         self.debug_vars = {}
+
+        #DOPS (PDA)
+        self.Priorities_all = {}
 
     def read_xml(self, model_filename=None, model_str=None):
         """Создание модели по файлу XML.
@@ -363,10 +411,30 @@ class GrandSolver(object):
             tempres = clstr.AddRes(reselement.attrib.get("name"), res_productivity[0], res_threads[0], res_price[0], reselement.attrib.get("id"), uuid1())
             if DEBUG:
                 print("\t" + tempres.Name)
+
+            ##!~ Palich
+            res_availability = []
+            res_avail_element_times = reselement.xpath("mdl:extensionElements/ltsm:props/@availability_time", namespaces=nsmap) or None
+            res_avail_element_times = res_avail_element_times or reselement.xpath("mdl:extensionElements/ltsm:props[@name='availability_time']/@value", namespaces=nsmap)
+            res_avail_element_times = res_avail_element_times or None
+            res_avail_element_values = reselement.xpath("mdl:extensionElements/ltsm:props/@availability_value", namespaces=nsmap) or None
+            res_avail_element_values = res_avail_element_values or reselement.xpath("mdl:extensionElements/ltsm:props[@name='availability_value']/@value", namespaces=nsmap)
+            res_avail_element_values = res_avail_element_values or None
+            #print(res_avail_element_times)
+            #print(res_avail_element_values)
+
+            if res_avail_element_times is not None and res_avail_element_values is not None:
+                for time_val in zip(res_avail_element_times, res_avail_element_values):
+                    #print(time_val)
+                    res_availability.append(
+                        (float(time_val[0]), int(time_val[1])))
+                res_availability.insert(0, (0, 0))
+            dyn.res_availability[tempres.ID] = res_availability[:]
+            #print(dyn.res_availability)
+            ##!~ /Palich
             # if self.p: self.p.send("INF: Загрузка процесса " + str(tempproc.ID))
-
         # построение списка процессов
-
+        #exit()
         print("Добавление процессов")
 
         # ОСТАЛОСЬ в bpmn_reader.py
@@ -396,6 +464,31 @@ class GrandSolver(object):
                 op_stream = opelement.xpath("mdl:extensionElements/ltsm:props/@stream", namespaces=nsmap) or None
                 op_stream = op_stream or opelement.xpath("mdl:extensionElements/ltsm:props[@name='stream']/@value", namespaces=nsmap)
                 op_stream = op_stream or ["0"]
+                op_penalty_start = opelement.xpath("mdl:extensionElements/ltsm:props/@penalty_start", namespaces=nsmap) or None
+                op_penalty_start = op_penalty_start or opelement.xpath("mdl:extensionElements/ltsm:props[@name='penalty_start']/@value", namespaces=nsmap)
+                op_penalty_start = op_penalty_start or ["0"]
+                op_penalty_angle = opelement.xpath("mdl:extensionElements/ltsm:props/@penalty_angle", namespaces=nsmap) or None
+                op_penalty_angle = op_penalty_angle or opelement.xpath("mdl:extensionElements/ltsm:props[@name='penalty_angle']/@value", namespaces=nsmap)
+                op_penalty_angle = op_penalty_angle or ["0"]
+
+                ##!~ Palich
+                op_availability = []
+                avail_element_times = opelement.xpath("mdl:extensionElements/ltsm:props/@availability_time", namespaces=nsmap) or None
+                avail_element_times = avail_element_times or opelement.xpath("mdl:extensionElements/ltsm:props[@name='availability_time']/@value", namespaces=nsmap)
+                avail_element_times = avail_element_times or None
+                avail_element_values = opelement.xpath("mdl:extensionElements/ltsm:props/@availability_value", namespaces=nsmap) or None
+                avail_element_values = avail_element_values or opelement.xpath("mdl:extensionElements/ltsm:props[@name='availability_value']/@value", namespaces=nsmap)
+                avail_element_values = avail_element_values or None
+                #print(avail_element_times)
+                #print(avail_element_values)
+
+                if avail_element_times is not None and avail_element_values is not None:
+                    for time_val in zip(avail_element_times, avail_element_values):
+                        #print(time_val)
+                        op_availability.append(
+                            (float(time_val[0]), int(time_val[1])))
+                    op_availability.insert(0, (0, 0))
+                ##!~ /Palich
 
                 # op_volume = opelement.xpath("mdl:extensionElements/ltsm:props[@name='volume']/@value", namespaces=nsmap) or [""]
                 # op_stream = opelement.xpath("mdl:extensionElements/ltsm:props[@name='stream']/@value", namespaces=nsmap) or [""]
@@ -416,7 +509,13 @@ class GrandSolver(object):
                         print(" нет исполнителя", end=" ")
                     else:
                         print(" выполняется на:", end=" ")
-
+                
+                #формирование матрицы penalty
+                dyn.penalty[tempop.ID] = ((float(op_penalty_start[0].replace(',', '.')), (float(op_penalty_angle[0].replace(',', '.'))), 0))
+                #формирование матрицы availability
+                dyn.availability[tempop.ID] = op_availability[:]
+                #print(dyn.availability)
+                
                 # формирование матрицы продуктивности
                 # изменено значение по умолчанию: если есть указание ресурса "в короткой записи", то считать продуктивность за 1.0
                 # иначе зачем вообще ссылка на ресурс
@@ -708,8 +807,9 @@ class GrandSolver(object):
 
                 # Если операция выполняется за пределами директивного срока - оштрафовать её
                 if op_exec_flag and len(self.penalty.get(n, [])) != 0 and t >= self.penalty[n][0]:
-                    self.penalty[n] = self.penalty[n][1]
-
+                    #PDA: заменен неправильный механизм оштрафования операции по вревышению директивного срока (штрафуем на величину angle: fine, который идет в показатель J4 становится равным angle)
+                    #self.penalty[n] = self.penalty[n][1]
+                    self.penalty[n] = (self.penalty[n][0], self.penalty[n][1], self.penalty[n][1])
                 # Основная модель: сумма коэффициентов по предшественникам + сумма коэффициентов по параллельным
 
                 summa_pred = 0
@@ -1166,7 +1266,7 @@ class GrandSolver(object):
                     if ((time - 1, op_fifo.ID) in self.timetable[-1]) and \
                             ((time, op_fifo.ID) not in self.timetable[-1]):
                         if DEBUG_INTERRUPT:
-                            print("Разрыв операции", op_fifo.Name, "по зонам видимости!!!!!!!!!!!!!!!!!")
+                            print("Разрыв операции", op_fifo.Name, "по зонам видимости")
                         conflict_flag = True
                     if ((time - 1, op_fifo.ID) in self.timetable[-1]) and \
                             ((time, op_fifo.ID) in self.timetable[-1]) and \
@@ -1416,7 +1516,7 @@ class GrandSolver(object):
                     # print prob.variables()
 
                 # Solve the problem using the default solver
-                solver = pulp.PULP_CBC_CMD(keepFiles=False, msg=False)
+                solver = pulp.PULP_CBC_CMD(keepFiles=True, msg=False)
                 #solver.tmpDir = 'TMP'
                 prob.solve(solver)
 
@@ -1443,18 +1543,19 @@ class GrandSolver(object):
 
                 solution = [s.varValue for s in sorted(prob.variables(), key=lambda v: int(v.name.split('_')[1]))]
                 #from pprint import pprint
-                #pprint(solution)
+                #print(solution)
                 
                 # PAVLOV CODE
-                self.Priorities_all = {}
+                #self.Priorities_all = {}
                 i = 0
                 for job_id in OpFront:
                     for res_id in ResFront:
                         if solution[i]: self.Priorities_all[job_id] = c[i]
                         i += 1
-                #pprint(self.Priorities_all)
-                # PAVLOV /CODE
+                #print(self.Priorities_all)
                 
+                # PAVLOV /CODE
+
                 # выполнение операций со включенным управлением
                 # uList = iter(control)
                 # upList = iter(streamcontrol)
@@ -1505,6 +1606,7 @@ class GrandSolver(object):
                                 if load_result != RES_REJECTED:  # если работу не отклонил
                                     log_timetable(time, job_id, res_id, up)  # внесение записи в расписание
 
+
                                     if self.logger and load_result:
                                         self.logger.put({
                                             "message": 'Операция {} - {}'.format(job_id, load_result),
@@ -1527,6 +1629,7 @@ class GrandSolver(object):
                                         print("Ресурс", res.Name, "отказался выполнять работу", op.Name)
                         except StopIteration:
                             break
+
 
                 if not ucntr:
                     if DEBUG_EXEC:
@@ -1584,7 +1687,6 @@ class GrandSolver(object):
                                       self.timetable[-1].get((time - 1, op.ID))[0], "->",
                                       self.timetable[-1].get((time, op.ID))[0])
                 if interruption_type != 0:
-                    #print("\t"*debug_tab, '❌🌀️КОНФЛИКТОВ ', self.conflict_count)
                     self.conflict_count += 1
                     if not options.get('relaxed'):
                         # определим, кто обслуживал операцию
@@ -1639,7 +1741,6 @@ class GrandSolver(object):
                                 #conf_res = 1 if conflicts1 < conflicts2 \
                                 #    else (2 if conflicts1 > conflicts2 else randrange(1, 2))
 
-                                #if abs(conflicts1 - conflicts2) < conflicts2*0.05: # Palich: пробуем ослабить условие запрета, конфликтов не сильно меньше
                                 if conflicts1 < conflicts2:
                                     if DEBUG_INTERRUPT:
                                         print(conflicts1, "<", conflicts2)
@@ -1706,8 +1807,6 @@ class GrandSolver(object):
                             print("Текущее время:", self.time)
                             print("Действующие ограничения", self.restriction)
                         return
-
-
 
 
         def log_timetable(time, job_id, res_id, intens):
@@ -1784,6 +1883,13 @@ class GrandSolver(object):
 
             print("Планирование от " + str(ts) + " до " + str(tf) + " (" + method + ")")
 
+        # в списке хранятся коэффициенты перед управляющими воздействиями в гамильтониане
+        # PAVLOV: 3.1.1 (коэффициенты при управлении операциями в H1 Гамильтониана)
+        global index_ham
+        global ham_file
+        global csv_data
+        csv_data = [['time', 'Job','Res','C','solution']]
+
         empty_loops = 0 # подсчёт количества шагов с пустым фронтом работ
         while self.time <= tf:  # проход по заданному интервалу
             
@@ -1835,17 +1941,33 @@ class GrandSolver(object):
                     tf = self.time
                     print("\t"*debug_tab, "✅ Все процессы завершены, план выполнен за", tf)
                 else:
-                    if False: # empty_loops > 300:
+                    if empty_loops > 3000:
                         print("⚠️ Много пустых итераций. Прерываем")
                         tf = self.time
                     else:
                         tf = self.time + 10
-                        tf = 1 + self.time**(empty_loops + 2)    # PAVLOV: пытаемся нелинейно расширять горизонт планирования - меньше итераций, когда не хватает времени
-                        # Увеличение времени двое дает преимущество в скорости расчетов
+                        # tf = self.time*2    # PAVLOV: пытаемся нелинейно расширять горизонт планирования - меньше итераций, когда не хватает времени
 
             self.time += self.Step
             empty_loops += 1  # считаем циклы, чтобы не зациклиться
+
+        
         self.D = self.time
+
+
+        # /PAVLOV: 3.1.1 (коэффициенты при управлении операциями в H1 Гамильтониана)
+        i = 0
+        for time_time,job_id in self.timetable[-1].keys():
+            res_id = self.timetable[-1][(time_time,job_id)][0]
+            csv_data.append([time_time, self.get_proc_op(job_id)[1].Name + '(' + str(job_id) + ')', self.get_clust_res(res_id)[1].Name + '(' + str(res_id) + ')', str(self.Priorities_all.get(job_id, 0)).replace('.',','), str(int(1 if (time_time, job_id) in self.timetable[-1] else 0 ))])
+            # self.penalty.get(job_id, (0,0,0))[2])
+            i += 1
+        # /PAVLOV: 3.1.1 (коэффициенты при управлении операциями в H1 Гамильтониана)
+        index_ham += 1
+        ham_file = open(os.path.join(dir_name, 'hamiltonian_' + str(index_ham) + '.csv'), 'w', newline='\n')
+        writer = csv.writer(ham_file, dialect='excel', delimiter=';')
+        writer.writerows(csv_data)
+        ham_file.close()
 
         if DEBUG_L2:
             print('*' * 10, 'fwd psi o')
@@ -1876,6 +1998,7 @@ class GrandSolver(object):
             print("Расчёт занял", round(t2 - t1, 3), "сек")
         if self.p:
             self.p.send("INF: Расчёт занял " + str(round(t2 - t1, 3)))
+
 
     def Assess(self, e=1):
         """Оценка качества плана. Принятие решения о следующей итерации на основе сравнения обобщённого показателя
@@ -2075,15 +2198,11 @@ class GrandSolver(object):
                     }
                 })
 
+        # return (len(self.QltList["J0"]) >= 3 and abs(self.QltList["J0"][-1] - self.QltList["J0"][-2]) < e) or \
+        return len(self.QltList["J0"]) > 6
+
         # если невязка обобщённого показателя больше e или если это только первая итерация
         # и не с чем сравнивать - повторить итерацию
-        e = min(self.QltList["J0"][-1], self.QltList["J0"][-2])*0.05    # Palich: вычисляем 5% разницы между качеством планов
-        return (len(self.QltList["J0"]) >= 3 and abs(self.QltList["J0"][-1] - self.QltList["J0"][-2]) < e) #or \
-
-        
-        # число итераций процесса!
-        return len(self.QltList["J0"]) > 6  
-
 
     def calculate_transversality(self):
         """Расчёт начальных условий сопряжённой системы уравнений."""
@@ -2632,7 +2751,7 @@ class GrandSolver(object):
             #			# END DEBUG
 
             # self.Assess()
-            if self.Assess(): break # завершаем вычислительный процесс при Assess = True (внутри функции число итераций и способ остановки)
+            if self.Assess(): break
 
             # if not integrate_options['relaxed']:
             #     break
@@ -2648,6 +2767,11 @@ class GrandSolver(object):
 
         if DEBUG_Q:
             print("Расчёт окончен")
+
+        # запись результатов последней оптимизации для Захарова
+        #writer = csv.writer(ham_file, dialect='excel', delimiter=';')
+        #writer.writerows(csv_data)
+        #ham_file.close()
 
     # в pipe отправляем признак завершения оптимизации
 
@@ -3367,7 +3491,7 @@ class UniRes(object):
 # DEPRECATED, moved to bpmn_reader.py
 def fill_template(dyn, number):
     """Создаёт number реальных процессов по заданному шаблону dyn"""
-    real_dyn = GrandSolver('Реальные данные')
+    real_dyn = GrandSolver('Реальные данные ' + str(number))
 
     real_dyn.D = dyn.D
 
@@ -3540,6 +3664,21 @@ def get_variable(var_name, default):
 @click.argument('file', type=str, required=True)  # default=sys.stdin для потокового ввода
 @click.argument('args', nargs=-1)
 def main(file, args):
+    if not file:
+        file = 'models/pavlov/test1.xml'
+        file = 'test.xml'
+        file = 'tests/basic.xml'
+        file = 'tests/basic2.xml'   # ЗАЦИКЛИВАНИЕ
+        file = 'models/common/robo.bpmn'  # Чтение BPMN
+        file = 'models/common/satellite.bpmn'  # Чтение BPMN
+        file = 'models/monsg.bpmn'  # Чтение BPMN
+        file = 'models/monsg-FINAL_gateway.bpmn'  # Чтение BPMN
+        file = 'models/monsg-FINAL_gateway-ispr-final.bpmn'  # Чтение BPMN
+        file = 'models/monsg-FINAL_gateway-ispr-final (2).bpmn'  # Чтение BPMN
+        file = 'models/monsg-FINAL_gateway-ispr-final (2)-simple.bpmn'  # Чтение BPMN
+        file = 'models/silos_uborka_simple.bpmn'  # Чтение BPMN
+        # file = 'monsg-FINAL_gateway-ispr-final(3).bpmn'
+        file = 'models/pavlov/mytry.bpmn'
     global args_dict
     args_dict = dict(zip(args[::2], args[1::2]))
     #print(args_dict)
@@ -3692,18 +3831,19 @@ def main(file, args):
         import plotly.express as px
         from datetime import datetime, timedelta
         import random
-        #from pandas import DataFrame
+        from pandas import DataFrame
 
         import warnings
         warnings.filterwarnings('ignore', category=FutureWarning)
 
         # Отрисовка показателей качества
-        #import json
+        import json
         #from pprint import pprint
         #pprint(real_dyn.QltList)
         qlt = deepcopy(real_dyn.QltList)
-        for k,v in list(qlt.items()):
+        for k,v in list(qlt.items())[1:]:
             # забиваем нулями то, что не соответствует длине
+            #print(qlt)
             if len(v) != len(qlt['J0']):
                 qlt[k] = [0 for _ in range(len(qlt['J0']))]
             # избавляемся от нулевых показателей
@@ -3730,7 +3870,6 @@ def main(file, args):
         from itertools import zip_longest
 
         head = '''
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- JQuery -->
 <script src="gantt/js/jquery-3.5.1.js"></script>
 <!-- Popper.js first, then Bootstrap JS -->
@@ -3844,7 +3983,7 @@ $('#example tbody').on('click', 'tr', function () {
 
         # офлайн визуализация всего в один html-файл
         with open('p_graph.html', 'w', encoding="utf-8") as f:
-            f.write('<!DOCTYPE html><html lang="ru">')
+            f.write('<html>')
             f.write(head)
             f.write('<body>')
 
@@ -3904,8 +4043,6 @@ $('#example tbody').on('click', 'tr', function () {
                     df.append(dict(Task=task, Start=start, Finish=finish, Resource=resource, Opprior = opprior))
 
                 df.sort(key=lambda x: x["Task"], reverse=True)
-                # если расписание пустое, то его не показываем
-                if not df: continue
 
                 ######
                 r = lambda: random.randint(0,255)
@@ -3923,15 +4060,12 @@ $('#example tbody').on('click', 'tr', function () {
                 title1 = 'Расписание работ по операциям'
                 fig1 = ff.create_gantt(df, title=title1, colors=colors, index_col='Resource', show_colorbar=True,
                                     group_tasks=False, showgrid_x=True, showgrid_y=True)
-                fig1.update_layout(legend_traceorder="grouped")
+                fig1.update_layout(overwrite=True, legend_traceorder="grouped")
                 #  визуализация  при явном указании диапазона времени
                 max_x = max([i['Finish']for i in df])
                 min_x = min([i['Start']for i in df])
                 fig1.update_layout(xaxis_range=[min_x, max_x])
                 fig1.update_layout(legend=dict(yanchor="top", y=0.9, xanchor="left", x=0.9))
-                
-                fig1.update_traces(marker_line_color='yellow', marker_line_width=1, opacity=0.6)
-                fig1.update_traces(mode='lines', line_color='yellow', selector=dict(fill='toself'))
 
                 # Текстовая аннтотация к столбикам
                 from dateutil.parser import parse
@@ -3956,8 +4090,8 @@ $('#example tbody').on('click', 'tr', function () {
                     # убираем пустые операции из расписания (added by Palich)
                     if not IntResStartStop:
                         continue
-                    start = (now + timedelta(0, IntResStartStop[0]['start'])).strftime('%Y-%m-%d %H:%M:%S')
-                    finish = (now + timedelta(0, IntResStartStop[0]['stop'])).strftime('%Y-%m-%d %H:%M:%S')
+                    start = (now + timedelta(0, IntResStartStop[0]['start'])).strftime('%Y-%m-%d %H:%M:%S').zfill(19)
+                    finish = (now + timedelta(0, IntResStartStop[0]['stop'])).strftime('%Y-%m-%d %H:%M:%S').zfill(19)
                     resource = str(IntResStartStop[0]['res'].Name)
                     #print(dict(Task=task, Start=now+start, Finish=now+finish, Resource=resource))
                     df.append(dict(Task=resource, Start=start, Finish=finish, Resource=task))
@@ -3979,9 +4113,6 @@ $('#example tbody').on('click', 'tr', function () {
                 min_x2 = min([i['Start']for i in df])
                 fig2.update_layout(xaxis_range=[min_x2, max_x2])
                 fig2.update_layout(legend=dict(yanchor="top", y=0.9, xanchor="left", x=0.9))
-                
-                fig2.update_traces(marker_line_color='yellow', marker_line_width=1, opacity=0.6)
-                fig2.update_traces(mode='lines', line_color='yellow', selector=dict(fill='toself'))
 
 
                 '''from plotly.subplots import make_subplots

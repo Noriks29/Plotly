@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dynamicmodel>
+  <name>test1.xml</name>
+  <duration>49</duration>
+  <cluster>
+    <id>1</id>
+    <name>Кластер</name>
+    <resource>
+      <id>RS_1</id>
+      <template_id>e95aed06-6060-11e9-8491-8c8590eef8e2</template_id>
+      <name>Исполнитель 1</name>
+      <capacity>1</capacity>
+      <power>5.0</power>
+      <price>30.0</price>
+    </resource>
+    <resource>
+      <id>RS_2</id>
+      <template_id>e95afb78-6060-11e9-a2cf-8c8590eef8e2</template_id>
+      <name>Исполнитель 2</name>
+      <capacity>1</capacity>
+      <power>5.0</power>
+      <price>5.0</price>
+    </resource>
+  </cluster>
+  <coefficients>
+    <integrity>0</integrity>
+    <uniform>0</uniform>
+    <fine>0</fine>
+    <cost>0.485</cost>
+    <flow>0</flow>
+    <interrupt>0</interrupt>
+    <time>0.515</time>
+  </coefficients>
+  <process>
+    <id>1</id>
+    <operation>
+      <id>op_1</id>
+      <template_id>e95d233a-6060-11e9-9165-8c8590eef8e2</template_id>
+      <name>Операция 1</name>
+      <volume>10</volume>
+      <stream>10</stream>
+      <x>120.0</x>
+      <y>550.0</y>
+    </operation>
+    <operation>
+      <id>op_2</id>
+      <template_id>e95d3fc8-6060-11e9-947c-8c8590eef8e2</template_id>
+      <name>Операция 2</name>
+      <volume>20</volume>
+      <stream>10</stream>
+      <x>220.0</x>
+      <y>550.0</y>
+    </operation>
+    <operation>
+      <id>op_3</id>
+      <template_id>e95d5cd8-6060-11e9-9108-8c8590eef8e2</template_id>
+      <name>Операция 3</name>
+      <volume>10</volume>
+      <stream>10</stream>
+      <x>320.0</x>
+      <y>550.0</y>
+    </operation>
+    <graph>
+      <edge from="op_1" to="op_2">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+      <edge from="op_2" to="op_3">
+        <fwd>1</fwd>
+        <rev>1</rev>
+      </edge>
+    </graph>
+  </process>
+  <productivity>
+    <resource ID="RS_1">
+      <job ID="op_1">
+        <value>1</value>
+      </job>
+      <job ID="op_2">
+        <value>1</value>
+      </job>
+    </resource>
+    <resource ID="RS_2">
+      <job ID="op_3">
+        <value>1</value>
+      </job>
+    </resource>
+  </productivity>
+</dynamicmodel>
