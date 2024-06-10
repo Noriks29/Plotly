@@ -51,4 +51,4 @@ def do_upload():
     
     
 
-run(host='localhost', port=80)
+run(host='0.0.0.0', port=80)
